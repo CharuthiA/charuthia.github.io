@@ -1,43 +1,277 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Hero Section -->
-    <section id="hero">
-        <h1>Hello, I'm Your Name</h1>
-        <p>Biomedical Engineer | R&D Innovator</p>
-    </section>
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name · Portfolio</title>
+    <meta name="description" content="Your Name – Biomedical / Mechanical Engineer. Projects, experience, and contact." />
+    
+    <!-- Favicons -->
+    <link rel="icon" href="pictures/your_photo.jpeg" sizes="any" />
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Short bio about your background, education, and focus areas.</p>
-    </section>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <style>
+      /* ---------- THEME TOKENS ---------- */
+      :root{
+        --accent:#0ea5e9;
+        --bg:#f7f7f8;
+        --text:#111111;
+        --muted:#374151;
+        --mutedSoft:#6b7280;
+        --card:#ffffffF2;
+        --border:#e5e7eb;
+        --radius:16px;
+      }
+      @media (prefers-color-scheme: dark){
+        :root{
+          --bg:#0b0b0c;
+          --text:#e7e7e7;
+          --muted:#cfd3da;
+          --mutedSoft:#a1a1aa;
+          --card:#161618;
+          --border:#2a2a2a;
+        }
+      }
+
+      /* ---------- BASE ---------- */
+      *{box-sizing:border-box}
+      html,body{margin:0;padding:0}
+      body{
+        font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+        color:var(--text);
+        background:var(--bg);
+      }
+      img, video{max-width:100%; height:auto}
+      a{color:var(--accent); text-decoration:none}
+      a:hover{text-decoration:underline}
+      .container{max-width:1000px; margin-inline:auto; padding:clamp(16px,2vw,24px)}
+      header{
+        position:sticky; top:0;
+        background:color-mix(in oklab, var(--card), transparent 20%);
+        backdrop-filter:saturate(160%) blur(8px);
+        border-bottom:1px solid var(--border);
+        z-index:10
+      }
+      nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+      nav ul{display:flex; gap:16px; list-style:none; margin:0; padding:0}
+      nav #nav-list[hidden]{display:none}
+      .brand{display:flex; align-items:center; gap:.5rem; font-weight:700; color:var(--text)}
+      .button{
+        display:inline-block; padding:.85rem 1.1rem; border-radius:9999px;
+        background:var(--accent); color:#fff; font-weight:700; border:0; cursor:pointer
+      }
+
+      /* HERO */
+      .hero{
+        display:grid; grid-template-columns:1fr 1.12fr; align-items:center;
+        gap:clamp(16px,4vw,48px); padding-block:clamp(28px,7vw,96px)
+      }
+      .hero h1{font-size:clamp(28px,6vw,56px); margin:0 0 12px; color:var(--text); line-height:1.1}
+      .hero p{font-size:clamp(16px,2.4vw,20px); color:var(--muted)}
+
+      section{scroll-margin-top:88px; padding-block:clamp(32px,6vw,72px)}
+      h2,h3,h4{color:var(--text); margin:0 0 16px}
+      p, li, label, small{color:var(--muted)}
+      .grid{display:grid; gap:24px}
+      .grid.cols-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+      .card{border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; background:var(--card)}
+      footer{border-top:1px solid var(--border); padding-block:32px; text-align:center; opacity:.95}
+
+      /* MOBILE */
+      @media (max-width:900px){ .hero{grid-template-columns:1fr} }
+      @media (max-width:720px){ nav ul{flex-direction:column; align-items:flex-start; gap:12px; padding:12px 0} .hero{text-align:center} }
+      @media (max-width:640px){ .button{width:100%; max-width:420px} }
+      
+      /* TYPEWRITER */
+      .typewriter{position:relative; white-space:nowrap; color:var(--accent)}
+      .type-line{ display:inline-block; min-width:1px }
+      .typewriter::after{
+        content:""; display:inline-block; width:1ch; height:1em; border-right:2px solid var(--accent);
+        animation:blink 1s steps(1,end) infinite;
+      }
+      @keyframes blink{50%{border-right-color:transparent}}
+    </style>
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">Skip to content</a>
+    <header>
+      <div class="container">
+        <nav aria-label="Primary">
+          <a class="brand" href="#home">🧬 Your Name</a>
+          <button id="nav-toggle" class="button" aria-expanded="false" aria-controls="nav-list"><i class='bx bx-menu'></i></button>
+          <ul id="nav-list" hidden>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section id="home" class="container hero">
+        <div>
+          <h1>
+            Hi, I’m
+            <span id="typewrap" class="typewriter" aria-label="Your Name">
+              <span id="line1" class="type-line"></span>
+              <br class="name-break">
+              <span id="line2" class="type-line"></span>
+            </span>
+          </h1>
+          <p><strong>Biomedical / Mechanical Engineer</strong> passionate about R&D, medical devices, and prototyping.</p>
+          <p><a class="button" href="#contact">Get in touch</a></p>
+        </div>
+        <figure>
+          <img src="pictures/your_photo.jpeg" alt="Your portfolio cover" style="border-radius:var(--radius); border:1px solid var(--border)">
+        </figure>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="container">
+        <h2>About</h2>
+        <p>I design and prototype medical devices and biomechanics systems, focusing on usability, manufacturability, and innovation. Experienced with orthopedic devices, wearables, and research-grade instrumentation.</p>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="container">
+        <h2>Skills</h2>
+        <div class="grid cols-3">
+          <div class="card" style="padding:16px;">
+            <h3>Mechanical Design</h3>
+            <ul>
+              <li>SolidWorks, Fusion 360, CATIA</li>
+              <li>FEA (ANSYS)</li>
+              <li>Rapid Prototyping (3D printing, CNC)</li>
+            </ul>
+          </div>
+          <div class="card" style="padding:16px;">
+            <h3>Data Analysis</h3>
+            <ul>
+              <li>MATLAB, Python, Excel</li>
+              <li>Signal Processing, Monte Carlo</li>
+            </ul>
+          </div>
+          <div class="card" style="padding:16px;">
+            <h3>Software / Programming</h3>
+            <ul>
+              <li>Arduino, C/C++, Python</li>
+              <li>HTML, JS for prototyping</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="container">
+        <h2>Education</h2>
+        <div class="grid">
+          <div class="card" style="padding:16px;">
+            <h3>UCSD – MS Mechanical Engineering (Biomechanics)</h3>
+            <p class="meta">2025 – 2026</p>
+          </div>
+          <div class="card" style="padding:16px;">
+            <h3>UC Davis – BS Biomedical Engineering</h3>
+            <p class="meta">2019 – 2025</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="container">
+        <h2>Experience</h2>
+        <div class="grid">
+          <div class="card" style="padding:16px;">
+            <h3>Vet Orthopedical Research Lab · UC Davis</h3>
+            <p class="meta">2024 – Present</p>
+            <ul>
+              <li>Testing orthopedic drill bits, analyzing wear and torque.</li>
+              <li>Leading V&V and post-market engineering studies.</li>
+            </ul>
+          </div>
+          <div class="card" style="padding:16px;">
+            <h3>Too Many Projects to List</h3>
+            <p class="meta">More experiences available upon request.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="container">
         <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Project 1</h3>
-            <p>Short description of the project.</p>
+        <div class="grid cols-3">
+          <div class="card" style="padding:16px;">
+            <h3>Smart Compression Therapy Sock</h3>
+            <p>Dynamic cuff inflation based on blood flow measurement for DVT prevention.</p>
+          </div>
+          <div class="card" style="padding:16px;">
+            <h3>Prosthetic Pointe Shoe</h3>
+            <p>Biomechanics-inspired design enabling dancers to perform safely.</p>
+          </div>
+          <div class="card" style="padding:16px;">
+            <h3>VR Prosthetic Fit Demo</h3>
+            <p>Using VR to validate prosthetic fit and comfort before manufacturing.</p>
+          </div>
         </div>
-        <div class="project-card">
-            <h3>Project 2</h3>
-            <p>Short description of the project.</p>
-        </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+      <!-- CONTACT -->
+      <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourusername">linkedin.com/in/yourusername</a></p>
-    </section>
-</body>
+        <form class="card" action="https://formspree.io/f/xldpgabg" method="POST" style="padding:16px;">
+          <p>
+            <label for="name">Name</label><br>
+            <input id="name" name="name" type="text" required placeholder="Jane Doe" class="input">
+          </p>
+          <p>
+            <label for="email">Email</label><br>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" class="input">
+          </p>
+          <p>
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="6" required placeholder="How can I help?" class="input"></textarea>
+          </p>
+          <p><button type="submit" class="button">Send</button></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> Your Name</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const toggle = document.getElementById('nav-toggle');
+      const list = document.getElementById('nav-list');
+      if(toggle && list){
+        toggle.addEventListener('click', ()=> {
+          const open = toggle.getAttribute('aria-expanded')==='true';
+          toggle.setAttribute('aria-expanded', String(!open));
+          if(open) list.setAttribute('hidden',''); else list.removeAttribute('hidden');
+        });
+      }
+
+      // Typewriter
+      const l1 = document.getElementById('line1'), l2 = document.getElementById('line2');
+      const text1='Your'; const text2='Name';
+      let i=0,j=0;
+      function typeFirst(){ if(i<=text1.length){l1.textContent=text1.slice(0,i++); setTimeout(typeFirst,70);} else setTimeout(typeSecond,250);}
+      function typeSecond(){ if(j<=text2.length){l2.textContent=text2.slice(0,j++); setTimeout(typeSecond,70);} }
+      typeFirst();
+    </script>
+  </body>
 </html>
+
