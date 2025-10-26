@@ -59,6 +59,83 @@ nav ul li a.active{color:var(--accent); font-weight:600;}
 .skills-box:hover{transform:translateY(-4px);}
 .skills-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
 
+/* Education Section */
+#education {
+  padding: 80px 20px;
+  background-color: var(--bg); /* matches overall site background */
+}
+
+#education h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--text);
+  margin-bottom: 60px;
+}
+
+#education .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+#education .card {
+  background-color: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+#education .card img {
+  border-radius: 12px;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+#education .card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: var(--text);
+}
+
+#education .card .meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+#education .card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+#education .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  #education .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #education .card img {
+    margin-bottom: 16px;
+  }
+}
+
+
 /* ---------- EXPERIENCE / PROJECT CARDS ---------- */
 .card{background:var(--card); border-radius:16px; overflow:hidden; border:1px solid var(--border); transition:transform 0.2s, box-shadow 0.3s;}
 .card:hover{transform:translateY(-4px); box-shadow:0 8px 20px rgba(0,0,0,0.2);}
