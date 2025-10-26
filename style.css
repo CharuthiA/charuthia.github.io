@@ -15,7 +15,6 @@ body {
   color: var(--cream);
   scroll-behavior: smooth;
 }
-
 a { text-decoration: none; color: var(--cream); }
 
 /* ---------- Navigation ---------- */
@@ -30,15 +29,12 @@ nav {
   top: 0;
   z-index: 1000;
 }
-
 nav .logo { font-weight: bold; color: var(--cream); }
-
 nav ul {
   display: flex;
   list-style: none;
   gap: 1.5rem;
 }
-
 nav a { color: var(--cream); transition: 0.3s; }
 nav a:hover { color: var(--light-blue); }
 
@@ -56,13 +52,9 @@ nav a:hover { color: var(--light-blue); }
   border-radius: 2px;
   transition: all 0.3s;
 }
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
 
 /* Mobile Menu */
 @media (max-width: 768px) {
@@ -79,7 +71,6 @@ nav a:hover { color: var(--light-blue); }
     padding-top: 2rem;
     transition: 0.3s;
   }
-
   nav ul.show { right: 0; }
   .hamburger { display: flex; }
 }
@@ -92,11 +83,9 @@ nav a:hover { color: var(--light-blue); }
   padding: 8rem 5%;
   flex-wrap: wrap;
 }
-
 .hero-left { flex: 1 1 300px; }
 .hero-right { flex: 1 1 250px; text-align: center; margin-top: 2rem; }
 .hero-right img { max-width: 100%; height: auto; border-radius: 50%; }
-
 .hero-buttons { margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; }
 .btn {
   padding: 0.6rem 1.2rem;
@@ -116,6 +105,7 @@ nav a:hover { color: var(--light-blue); }
   justify-content: center;
 }
 
+/* ---------- Dynamic Card Hover ---------- */
 .card {
   flex: 1 1 250px;
   max-width: 300px;
@@ -123,34 +113,12 @@ nav a:hover { color: var(--light-blue); }
   border-radius: 16px;
   padding: 2rem;
   text-align: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card:hover { transform: translateY(-5px); }
-
-/* ---------- Flip Cards ---------- */
-.flip-card-container { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-.flip-card {
-  background-color: transparent;
-  width: 250px;
-  height: 180px;
-  perspective: 1000px;
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
-.flip-card-front, .flip-card-back {
-  background-color: var(--dark-blue);
-  color: var(--cream);
-  border-radius: 16px;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backface-visibility: hidden;
-  padding: 1rem;
-}
-.flip-card-back { transform: rotateY(180deg); }
-.flip-card:hover .flip-card-front { transform: rotateY(180deg); }
-.flip-card:hover .flip-card-back { transform: rotateY(0); }
 
 /* ---------- Fade-in Animation ---------- */
 .fade-in { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
@@ -161,5 +129,5 @@ nav a:hover { color: var(--light-blue); }
   #hero { flex-direction: column-reverse; text-align: center; }
   .hero-left { margin-top: 2rem; }
   .btn { width: 180px; margin-bottom: 0.5rem; }
-  .card, .flip-card { flex: 1 1 90%; }
+  .card { flex: 1 1 90%; }
 }
