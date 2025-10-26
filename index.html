@@ -1,178 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charuthi Arul | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Engineering Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Mechanical & Biomedical Engineer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Header / Navigation -->
-  <header>
-    <nav>
-      <div class="logo">Charuthi Arul</div>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul id="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a mechanical and biomedical engineer specializing in designing and prototyping medical devices. My work spans concept generation, CAD/FEA, prototyping, and validation.</p>
+        </section>
 
-  <!-- Hero Section -->
-  <section id="hero" class="fade-in">
-    <div class="hero-left">
-      <h1>Hi, I'm Charuthi Arul</h1>
-      <h2><span id="typed-text"></span></h2>
-      <p>Turning ideas into impactful medical device solutions.</p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn">Contact Me</a>
-        <a href="resume.pdf" class="btn">Resume</a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <img src="profile.jpg" alt="Charuthi Arul">
-    </div>
-  </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Smart Compression Therapy Sleeve</h3>
+                <p>Developed a cuff inside a compression sock to monitor and adjust blood flow to prevent DVT using pressure sensors and air pumps.</p>
+            </div>
+            <div class="project">
+                <h3>Orthopedic Drill Bit Optimization</h3>
+                <p>Optimized surgical drill bit to reduce thermal osteonecrosis, tested torque consistency, and validated coating longevity.</p>
+            </div>
+            <!-- Add more projects here -->
+        </section>
 
-  <!-- About Section -->
-  <section id="about" class="about-section fade-in">
-    <h2>About Me</h2>
-    <p>
-      I design and validate medical devices that merge precision engineering with patient impact. My sweet spot is where biomechanics, mechanical design, and rapid prototyping intersect. I work end-to-end—concept → CAD/FEA → prototyping → verification & validation—partnering closely with clinical teams, R&D engineers, and manufacturing to bring ideas to life.
-    </p>
-    <p>
-      I’ve contributed to orthopedic instrumentation at Think Surgical, translational biomechanics research at the Carney Lab, and startup prototyping at RESURG. I care about rigorous testing, reproducible data, and designs that hold up under real clinical constraints.
-    </p>
-    <div class="highlights">
-      <div class="highlight">
-        <strong>Strengths:</strong> CAD & FEA (SolidWorks, Fusion 360, ANSYS), mechanical design
-      </div>
-      <div class="highlight">
-        <strong>Build:</strong> 3D printing, machining, torque/force testing, V&V execution
-      </div>
-      <div class="highlight">
-        <strong>Software:</strong> MATLAB, Python, Arduino/C++, data visualization, HTML/JS
-      </div>
-    </div>
-  </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="job">
+                <h3>R&D Engineering Intern - ThinkSurgical</h3>
+                <p>Investigated accessory device failures, spearheaded technical studies, and contributed to continuous product improvements.</p>
+            </div>
+            <!-- Add more experiences here -->
+        </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="card-section fade-in">
-    <h2>Experience</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Think Surgical</h3>
-        <p>R&D & Engineering Intern – Optimized surgical instrumentation & executed V&V testing.</p>
-      </div>
-      <div class="card">
-        <h3>Carney Lab</h3>
-        <p>Translational biomechanics research – Designed test systems and conducted experiments on tissue mechanics.</p>
-      </div>
-      <div class="card">
-        <h3>RESURG</h3>
-        <p>Startup prototyping – Developed early-stage medical device concepts and assisted in mechanical validation.</p>
-      </div>
-    </div>
-  </section>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="school">
+                <h3>UC Davis | B.S. Biomedical Engineering</h3>
+                <p>Graduated June 2025</p>
+            </div>
+            <div class="school">
+                <h3>UCSD | M.S. Mechanical Engineering (Biomechanics & Biomedical Engineering)</h3>
+                <p>Starting Fall 2025</p>
+            </div>
+        </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="card-section fade-in">
-    <h2>Projects</h2>
-    <div class="card-container">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="project1.jpg" alt="Project 1">
-            <h3>Smart Wound Monitor</h3>
-          </div>
-          <div class="flip-card-back">
-            <p>Biomedical Device, Sensors, Haptics</p>
-            <button class="btn modal-btn" data-project="1">Learn More</button>
-          </div>
-        </div>
-      </div>
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="project2.jpg" alt="Project 2">
-            <h3>Compression Therapy Sock</h3>
-          </div>
-          <div class="flip-card-back">
-            <p>Medical Wearable, Blood Flow, Pneumatic Cuffs</p>
-            <button class="btn modal-btn" data-project="2">Learn More</button>
-          </div>
-        </div>
-      </div>
-      <!-- Repeat flip-cards for Projects 3-6 -->
-    </div>
-  </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+        </section>
+    </main>
 
-  <!-- Education Section -->
-  <section id="education" class="card-section fade-in">
-    <h2>Education</h2>
-    <div class="card-container">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h3>UC Davis BS BME</h3>
-            <p>2021-2025 | GPA 3.76</p>
-          </div>
-          <div class="flip-card-back">
-            <p><strong>Relevant Coursework:</strong> Biomechanics, Biomaterials, Control Systems</p>
-            <p><strong>Leadership:</strong> XYZ Club President</p>
-            <p><strong>Awards:</strong> ABC Scholarship</p>
-          </div>
-        </div>
-      </div>
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h3>UCSD MS Mechanical Engineering</h3>
-            <p>2026-2027</p>
-          </div>
-          <div class="flip-card-back">
-            <p><strong>Concentration:</strong> Biomedical Engineering & Biomechanics</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="card-section fade-in">
-    <h2>Contact</h2>
-    <div class="card-container">
-      <div class="card">
-        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-      </div>
-      <div class="card">
-        <p>LinkedIn: <a href="https://linkedin.com/in/charuthiarul">linkedin.com/in/charuthiarul</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Project Modal -->
-  <div id="project-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3 id="modal-title">Project Title</h3>
-      <img id="modal-img" src="" alt="">
-      <p id="modal-tags">Tags</p>
-      <p id="modal-desc">Description</p>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 Your Name</p>
+    </footer>
 </body>
 </html>
+
