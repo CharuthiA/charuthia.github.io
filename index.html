@@ -55,6 +55,17 @@
     <p>
       I’ve contributed to orthopedic instrumentation at Think Surgical, translational biomechanics research at the Carney Lab, and startup prototyping at RESURG. I care about rigorous testing, reproducible data, and designs that hold up under real clinical constraints. I thrive in environments like J&J, Stryker, or Boston Scientific—where precision, iteration, and reliability meet human health.
     </p>
+    <div class="highlights">
+      <div class="highlight">
+        <strong>Strengths:</strong> CAD & FEA (SolidWorks, Fusion 360, ANSYS), mechanical design
+      </div>
+      <div class="highlight">
+        <strong>Build:</strong> 3D printing, machining, torque/force testing, V&V execution
+      </div>
+      <div class="highlight">
+        <strong>Software:</strong> MATLAB, Python, Arduino/C++, data visualization, HTML/JS
+      </div>
+    </div>
   </section>
 
   <!-- Skills Section -->
@@ -150,23 +161,11 @@
           </div>
           <div class="flip-card-back">
             <p>Tag1, Tag2</p>
-            <a href="project1.html" class="btn">Learn More</a>
+            <button class="btn modal-btn" data-project="1">Learn More</button>
           </div>
         </div>
       </div>
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="project2.jpg" alt="Project 2">
-            <h3>Project 2</h3>
-          </div>
-          <div class="flip-card-back">
-            <p>Tag1, Tag2</p>
-            <a href="project2.html" class="btn">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <!-- Repeat for Project 3-6 -->
+      <!-- Repeat Project 2-6 similarly -->
     </div>
   </section>
 
@@ -182,6 +181,17 @@
       </div>
     </div>
   </section>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modal-title">Project Title</h3>
+      <img id="modal-img" src="" alt="">
+      <p id="modal-tags">Tags</p>
+      <p id="modal-desc">Description</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
