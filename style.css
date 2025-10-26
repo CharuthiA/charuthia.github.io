@@ -131,3 +131,27 @@ nav a:hover { color: var(--light-blue); }
   .btn { width: 180px; margin-bottom: 0.5rem; }
   .card { flex: 1 1 90%; }
 }
+
+/* ---------- About ---------- */
+.about-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 5%;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.about-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--light-blue);
+}
+
+.about-section p {
+  margin-bottom: 1.5rem;
+  color: var(--cream);
+}
+
+.about-section strong {
+  color: var(--light-blue);
+}
