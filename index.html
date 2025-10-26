@@ -1,178 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charuthi Arul · Biomedical Engineer</title>
-  
-  <!-- Fonts + Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charuthi Arul · Biomedical Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ---------- HEADER ---------- -->
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand">Charuthi Arul</div>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#hero">Charuthi Arul</a>
+      <ul>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <!-- ---------- HERO ---------- -->
-  <section class="hero container" id="hero">
+<main>
+  <!-- HERO -->
+  <section id="hero" class="container hero">
     <div>
-      <h1 class="typewriter">Charuthi Arul</h1>
-      <p class="subtitle">Bridging biomechanics and innovation to design medical devices that make a difference.</p>
-      <div style="margin-top: 1.5rem;">
-        <a href="#contact" class="button">Get in Touch</a>
-        <a href="#" class="button">Resume</a>
+      <h1>
+        <span class="typewriter">
+          <span id="line1" class="type-line"></span>
+          <br>
+          <span id="line2" class="type-line"></span>
+        </span>
+      </h1>
+      <p>Bridging biomechanics and innovation to design medical devices that make a difference.</p>
+      <div style="margin-top:16px;">
+        <a class="button" href="#contact">Get in Touch</a>
+        <a class="button" href="#">Resume</a>
       </div>
     </div>
+    <figure>
+      <img src="placeholder-photo.jpg" alt="Charuthi Arul" style="border-radius:16px;">
+    </figure>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="container about">
+    <figure><img src="placeholder-photo.jpg" alt="Charuthi Arul"></figure>
     <div>
-      <img src="https://via.placeholder.com/400x400.png?text=Your+Photo" alt="Charuthi Arul">
+      <h2>About Me</h2>
+      <p>I am a biomedical engineer passionate about designing medical devices that are both innovative and human-centered. I thrive at the intersection of biomechanics, prototyping, and user-focused design, bringing concepts from idea to reality.</p>
     </div>
   </section>
 
-  <!-- ---------- ABOUT ---------- -->
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="Charuthi">
-      <div>
-        <p>Hello! I'm Charuthi Arul, a biomedical engineering student passionate about designing devices that work in the real world. My focus is bridging biomechanics, innovation, and human-centered design to solve challenging problems in healthcare.</p>
-        <p>I enjoy prototyping, working with wearables and embedded systems, and exploring the interface between technology and human experience. I’m always eager to learn and take on projects that push boundaries and make a tangible impact.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ---------- SKILLS ---------- -->
+  <!-- SKILLS -->
   <section id="skills" class="container">
     <h2>Skills</h2>
     <div class="skills-grid">
       <div class="skills-box">
-        <h3>Technical</h3>
+        <h3><i class='bx bxs-cog'></i> Technical</h3>
         <ul>
-          <li>CAD Design (SolidWorks, Fusion 360)</li>
-          <li>Prototyping & 3D Printing</li>
-          <li>Embedded Systems & Microcontrollers</li>
-          <li>Biomechanical Analysis</li>
+          <li>CAD (SolidWorks, Fusion 360)</li>
+          <li>Rapid Prototyping (3D printing, CNC)</li>
+          <li>FEA, Material Testing</li>
         </ul>
       </div>
       <div class="skills-box">
-        <h3>Software</h3>
+        <h3><i class='bx bxs-bar-chart-alt-2'></i> Data & Analysis</h3>
         <ul>
-          <li>Python & MATLAB</li>
-          <li>LabVIEW</li>
-          <li>ImageJ & Data Analysis Tools</li>
-          <li>Version Control (Git)</li>
+          <li>Python, MATLAB</li>
+          <li>Signal Processing</li>
+          <li>Experimental Design</li>
         </ul>
       </div>
       <div class="skills-box">
-        <h3>Professional</h3>
+        <h3><i class='bx bxl-javascript'></i> Software</h3>
         <ul>
-          <li>Project Management</li>
-          <li>Technical Documentation</li>
-          <li>Cross-functional Collaboration</li>
-          <li>Problem-solving & Critical Thinking</li>
+          <li>Arduino, C/C++</li>
+          <li>Unity / Unreal Engine</li>
+          <li>HTML, JS</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- ---------- EXPERIENCE ---------- -->
+  <!-- EXPERIENCE -->
   <section id="experience" class="container">
     <h2>Experience</h2>
-    <div class="card-grid">
-      <!-- Card Example -->
+    <div class="grid cols-3">
       <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="https://via.placeholder.com/400x200.png?text=Project+Image" alt="Project Image">
-            <h3>Orthopedic Drill Optimization</h3>
-            <p class="meta"><span class="tag">R&D</span><span class="tag">Prototyping</span></p>
-          </div>
-          <div class="card-back">
-            <ul>
-              <li>Performed V&V testing on surgical drill bits</li>
-              <li>Analyzed torque, force, and heat generation</li>
-              <li>Optimized design to minimize bone damage</li>
-            </ul>
-          </div>
-        </div>
+        <img src="placeholder-project.jpg" alt="Project 1">
+        <div class="meta"><span class="tag">Wearables</span><span class="tag">Prototyping</span></div>
+        <ul>
+          <li>Led device prototyping and testing</li>
+          <li>Performed data analysis to optimize performance</li>
+        </ul>
       </div>
-
-      <!-- Add more cards here -->
+      <div class="card">
+        <img src="placeholder-project.jpg" alt="Project 2">
+        <div class="meta"><span class="tag">Embedded</span><span class="tag">R&D</span></div>
+        <ul>
+          <li>Developed embedded electronics for device</li>
+          <li>Conducted validation and verification testing</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="placeholder-project.jpg" alt="Project 3">
+        <div class="meta"><span class="tag">Biomechanics</span><span class="tag">Simulation</span></div>
+        <ul>
+          <li>Modeled biomechanical interactions</li>
+          <li>Generated reports for cross-functional teams</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- ---------- PROJECTS ---------- -->
+  <!-- PROJECTS -->
   <section id="projects" class="container">
     <h2>Projects</h2>
-    <div class="card-grid">
-      <!-- Card Example -->
+    <div class="grid cols-3">
       <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="https://via.placeholder.com/400x200.png?text=Project+Image" alt="Project Image">
-            <h3>Smart Compression Therapy Sleeve</h3>
-            <p class="meta"><span class="tag">Wearable</span><span class="tag">Embedded</span><span class="tag">Prototyping</span></p>
-          </div>
-          <div class="card-back">
-            <ul>
-              <li>Designed cuff to measure blood flow difference</li>
-              <li>Automated inflation/deflation of compression sock</li>
-              <li>Embedded sensors and control logic integration</li>
-            </ul>
-          </div>
-        </div>
+        <img src="placeholder-project.jpg" alt="Project A">
+        <div class="meta"><span class="tag">Medical Device</span><span class="tag">Innovation</span></div>
+        <ul>
+          <li>Prototype design and fabrication</li>
+          <li>User testing & iteration</li>
+        </ul>
       </div>
-
-      <!-- Add more cards here -->
+      <div class="card">
+        <img src="placeholder-project.jpg" alt="Project B">
+        <div class="meta"><span class="tag">Software</span><span class="tag">Embedded</span></div>
+        <ul>
+          <li>Developed custom firmware</li>
+          <li>Integrated sensors and feedback loops</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="placeholder-project.jpg" alt="Project C">
+        <div class="meta"><span class="tag">Biomechanics</span><span class="tag">Analysis</span></div>
+        <ul>
+          <li>Simulated forces and stress analysis</li>
+          <li>Generated presentation for collaborators</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- ---------- CONTACT ---------- -->
+  <!-- CONTACT -->
   <section id="contact" class="container">
     <h2>Contact</h2>
-    <div class="contact-form">
-      <p>Email: <a href="mailto:charuthiarul@gmail.com">charuthiarul@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/charuthi-arul/">https://www.linkedin.com/in/charuthi-arul/</a></p>
-      <a href="#" class="button">Resume</a>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>Email</h3>
+        <p><a href="mailto:charuthiarul@gmail.com">charuthiarul@gmail.com</a></p>
+      </div>
+      <div class="card">
+        <h3>LinkedIn</h3>
+        <p><a href="https://www.linkedin.com/in/charuthi-arul/" target="_blank">linkedin.com/in/charuthi-arul</a></p>
+      </div>
+      <div class="card">
+        <h3>Resume</h3>
+        <p><a href="#">Download</a></p>
+      </div>
     </div>
   </section>
+</main>
 
-  <!-- ---------- FOOTER ---------- -->
-  <footer>
-    &copy; 2025 Charuthi Arul. All rights reserved.
-  </footer>
+<footer>
+  <p>&copy; 2025 Charuthi Arul. All rights reserved.</p>
+</footer>
 
-  <!-- ---------- TYPEWRITER SCRIPT ---------- -->
-  <script>
-    const typewriter = document.querySelector('.typewriter');
-    const text = typewriter.textContent;
-    typewriter.textContent = '';
-    let i = 0;
-    function type() {
-      if (i < text.length) {
-        typewriter.textContent += text[i];
-        i++;
-        setTimeout(type, 100);
+<!-- ---------- SCRIPTS ---------- -->
+<script>
+  // Typewriter effect
+  const line1 = "Designing medical devices";
+  const line2 = "that make a difference";
+  let i = 0, j = 0;
+  function typeWriter() {
+    if(i < line1.length){ document.getElementById('line1').textContent += line1.charAt(i++); setTimeout(typeWriter, 50);}
+    else if(j < line2.length){ document.getElementById('line2').textContent += line2.charAt(j++); setTimeout(typeWriter, 50);}
+  }
+  typeWriter();
+
+  // Scroll active menu
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav ul li a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      const sectionHeight = section.clientHeight;
+      if(pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight){
+        current = section.getAttribute('id');
       }
-    }
-    type();
-  </script>
+    });
+    navLinks.forEach(link => {link.classList.remove('active'); if(link.getAttribute('href') === '#' + current){link.classList.add('active');}});
+  });
+
+  // Header shadow on scroll
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', () => {header.classList.toggle('scrolled', window.scrollY > 50);});
+</script>
 
 </body>
 </html>
