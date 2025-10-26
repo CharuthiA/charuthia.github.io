@@ -225,3 +225,61 @@ section {
         flex-direction: column;
     }
 }
+
+/* Typing effect for Hero name */
+.typed-text {
+    color: #007acc;
+    border-right: 2px solid #007acc; /* Cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 0;
+    animation: typing 2s steps(13, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 13ch; } /* 13 characters in "Charuthi Arul" */
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.project-box {
+    perspective: 1000px; /* Enable 3D perspective */
+}
+
+.project-box-inner {
+    position: relative;
+    width: 100%;
+    height: 250px; /* adjust as needed */
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.project-box:hover .project-box-inner {
+    transform: rotateY(180deg);
+}
+
+.project-front, .project-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.project-front {
+    background-color: #fff;
+}
+
+.project-back {
+    background-color: #f0f0f0;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
