@@ -1,42 +1,42 @@
 /* ---------- Colors ---------- */
 :root {
-  --dark-bg: #0D1321;
-  --dark-blue: #1D2D44;
-  --mid-blue: #3E5C76;
-  --light-blue: #748CAB;
-  --cream: #F0EBD8;
+  --cadet: #2F3456;
+  --paynes-gray: #5D6E75;
+  --cambridge-blue: #8BA794;
+  --ash-gray: #BAC6B8;
+  --alabaster: #E9E4DC;
 }
 
 /* ---------- General ---------- */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: var(--dark-bg);
-  color: var(--cream);
+  background-color: var(--cadet);
+  color: var(--alabaster);
   scroll-behavior: smooth;
 }
-a { text-decoration: none; color: var(--cream); }
+a { text-decoration: none; color: var(--alabaster); }
+a:hover { color: var(--cambridge-blue); }
 
 /* ---------- Navigation ---------- */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--dark-blue);
+  background-color: var(--paynes-gray);
   padding: 1rem 2rem;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
 }
-nav .logo { font-weight: bold; color: var(--cream); }
+nav .logo { font-weight: bold; color: var(--alabaster); }
 nav ul {
   display: flex;
   list-style: none;
   gap: 1.5rem;
 }
-nav a { color: var(--cream); transition: 0.3s; }
-nav a:hover { color: var(--light-blue); }
+nav a { color: var(--alabaster); transition: 0.3s; }
 
 /* Hamburger menu */
 .hamburger {
@@ -48,7 +48,7 @@ nav a:hover { color: var(--light-blue); }
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: var(--cream);
+  background-color: var(--alabaster);
   border-radius: 2px;
   transition: all 0.3s;
 }
@@ -64,7 +64,7 @@ nav a:hover { color: var(--light-blue); }
     right: -100%;
     width: 200px;
     height: calc(100vh - 70px);
-    background-color: var(--dark-blue);
+    background-color: var(--paynes-gray);
     flex-direction: column;
     align-items: center;
     gap: 2rem;
@@ -89,12 +89,14 @@ nav a:hover { color: var(--light-blue); }
 .hero-buttons { margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; }
 .btn {
   padding: 0.6rem 1.2rem;
-  background-color: var(--mid-blue);
+  background-color: var(--cambridge-blue);
+  color: var(--cadet);
   border-radius: 12px;
   transition: 0.3s;
   display: inline-block;
+  font-weight: bold;
 }
-.btn:hover { background-color: var(--light-blue); }
+.btn:hover { background-color: var(--ash-gray); }
 
 /* ---------- Card Sections ---------- */
 .card-section { padding: 6rem 5%; text-align: center; }
@@ -105,20 +107,60 @@ nav a:hover { color: var(--light-blue); }
   justify-content: center;
 }
 
-/* ---------- Dynamic Card Hover ---------- */
-.card {
+/* ---------- Skill Cards ---------- */
+.skill-card {
+  background-color: var(--paynes-gray);
+  border-radius: 20px;
+  padding: 1.5rem;
   flex: 1 1 250px;
-  max-width: 300px;
-  background-color: var(--dark-blue);
-  border-radius: 16px;
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-.card:hover {
+.skill-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
+
+/* ---------- Flip Cards ---------- */
+.flip-card {
+  background-color: transparent;
+  width: 280px;
+  height: 180px;
+  perspective: 1000px;
+  margin: 1rem;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.flip-card-front { background-color: var(--paynes-gray); color: var(--alabaster); }
+.flip-card-back { background-color: var(--cambridge-blue); color: var(--cadet); transform: rotateY(180deg); }
+
+/* ---------- About ---------- */
+.about-section {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+.about-section h2 { text-align: center; margin-bottom: 2rem; color: var(--cambridge-blue); }
+.about-section p { margin-bottom: 1.5rem; color: var(--alabaster); }
 
 /* ---------- Fade-in Animation ---------- */
 .fade-in { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
@@ -129,29 +171,5 @@ nav a:hover { color: var(--light-blue); }
   #hero { flex-direction: column-reverse; text-align: center; }
   .hero-left { margin-top: 2rem; }
   .btn { width: 180px; margin-bottom: 0.5rem; }
-  .card { flex: 1 1 90%; }
-}
-
-/* ---------- About ---------- */
-.about-section {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 6rem 5%;
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-.about-section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--light-blue);
-}
-
-.about-section p {
-  margin-bottom: 1.5rem;
-  color: var(--cream);
-}
-
-.about-section strong {
-  color: var(--light-blue);
+  .card, .skill-card, .flip-card { flex: 1 1 90%; }
 }
