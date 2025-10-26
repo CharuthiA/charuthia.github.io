@@ -1,242 +1,186 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Charuthi Arul · Biomedical Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charuthi Arul · Biomedical / Biomechanics Engineering</title>
+  <meta name="description" content="Charuthi Arul — Biomedical & Biomechanics engineer. Projects, experience, and contact." />
+
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="container">
-    <nav>
-      <a class="brand" href="#hero">Charuthi Arul</a>
-      <ul>
-        <li><a href="#hero" class="active">Home</a></li>
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="nav container">
+      <a href="#hero" class="logo">Charuthi Arul</a>
+      <ul class="menu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main>
-  <!-- HERO -->
-  <section id="hero" class="container hero">
-    <div>
-      <h1>
-        <span class="typewriter">
-          <span id="line1" class="type-line"></span>
-          <br>
-          <span id="line2" class="type-line"></span>
-        </span>
-      </h1>
-      <p>Bridging biomechanics and innovation to design medical devices that make a difference.</p>
-      <div style="margin-top:16px;">
-        <a class="button" href="#contact">Get in Touch</a>
-        <a class="button" href="#">Resume</a>
+  <!-- Hero Section -->
+  <section id="hero" class="hero container">
+    <div class="hero-text">
+      <p class="intro">Hi, I'm</p>
+      <h1 class="name typewriter">Charuthi Arul</h1>
+      <p class="tagline">Bridging biomechanics and innovation to design medical devices that make a difference.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Get in Touch</a>
+        <a href="#" class="btn-outline">Resume</a>
       </div>
     </div>
-    <figure>
-      <img src="placeholder-photo.jpg" alt="Charuthi Arul" style="border-radius:16px;">
-    </figure>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="container about">
-    <figure><img src="placeholder-photo.jpg" alt="Charuthi Arul"></figure>
-    <div>
-      <h2>About Me</h2>
-      <p>I am a biomedical engineer passionate about designing medical devices that are both innovative and human-centered. I thrive at the intersection of biomechanics, prototyping, and user-focused design, bringing concepts from idea to reality.</p>
+    <div class="hero-photo">
+      <img src="images/filler_photo.png" alt="Charuthi Lura" />
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>
+      I'm a biomedical engineering graduate passionate about designing devices that solve real-world clinical challenges. I combine technical knowledge, creativity, and a human-centered approach to bring ideas from concept to prototype.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
   <section id="skills" class="container">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="skills-box">
-        <h3><i class='bx bxs-cog'></i> Technical</h3>
+      <div class="skill-box">
+        <h3>Technical</h3>
         <ul>
-          <li>CAD (SolidWorks, Fusion 360)</li>
-          <li>Rapid Prototyping (3D printing, CNC)</li>
-          <li>FEA, Material Testing</li>
+          <li>CAD & SolidWorks</li>
+          <li>Embedded Systems & Microcontrollers</li>
+          <li>Medical Device Prototyping</li>
+          <li>Biomechanics Analysis</li>
         </ul>
       </div>
-      <div class="skills-box">
-        <h3><i class='bx bxs-bar-chart-alt-2'></i> Data & Analysis</h3>
+      <div class="skill-box">
+        <h3>Software</h3>
         <ul>
-          <li>Python, MATLAB</li>
-          <li>Signal Processing</li>
-          <li>Experimental Design</li>
+          <li>MATLAB & Python</li>
+          <li>LabVIEW</li>
+          <li>FEM & Simulation Tools</li>
+          <li>Data Analysis & Visualization</li>
         </ul>
       </div>
-      <div class="skills-box">
-        <h3><i class='bx bxl-javascript'></i> Software</h3>
+      <div class="skill-box">
+        <h3>Other</h3>
         <ul>
-          <li>Arduino, C/C++</li>
-          <li>Unity / Unreal Engine</li>
-          <li>HTML, JS</li>
+          <li>Project Management</li>
+          <li>Team Leadership</li>
+          <li>Technical Writing & Documentation</li>
         </ul>
       </div>
     </div>
   </section>
-  
-<!-- EDUCATION -->
-<section id="education" class="container" aria-labelledby="edu-heading">
-  <h2 id="edu-heading">Education</h2>
-  <div class="grid">
-    <article class="card" style="display:grid; grid-template-columns:120px 1fr; gap:16px; align-items:center; padding:16px;">
-      <img src="pictures/ucd_logo.png" alt="UC Davis Logo" width="120" height="120" />
-      <div>
-        <h3>BS Biomedical Engineering · UC Davis</h3>
-        <p class="meta">2021 – 2025</p>
-        <ul>
-          <li>Senior Design Capstone: Orthopedic Drill Bit Project (V&V testing & optimization)</li>
-          <li>Relevant coursework: Biomechanics, Biomaterials, Design for Human Body</li>
-          <li>Awards / Honors: [insert if desired]</li>
-        </ul>
-      </div>
-    </article>
 
-    <article class="card" style="display:grid; grid-template-columns:120px 1fr; gap:16px; align-items:center; padding:16px;">
-      <img src="pictures/ucsd_logo.png" alt="UCSD Logo" width="120" height="120" />
-      <div>
-        <h3>MS Mechanical Engineering · UCSD</h3>
-        <p class="meta">2025 – 2026 (anticipated)</p>
-        <ul>
-          <li>Focus: Biomechanics & medical device design</li>
-          <li>Research / Lab Goals: [optional]</li>
-        </ul>
-      </div>
-    </article>
-  </div>
-</section>
-  
-  <!-- EXPERIENCE -->
+  <!-- Education + Honors/Leadership -->
+  <section id="education" class="container">
+    <h2>Education</h2>
+    <div class="grid cols-2">
+      <!-- UC Davis -->
+      <article class="edu-card">
+        <img src="images/ucd_logo.png" alt="UC Davis Logo" width="100" height="100">
+        <div>
+          <h3>University of California, Davis</h3>
+          <p class="degree">B.S. in Biomedical Engineering</p>
+          <ul>
+            <li>Graduated: 2025</li>
+            <li>Senior Design Capstone: Orthopedic surgical drill optimization</li>
+            <li>Relevant coursework: Biomechanics, Medical Device Design, Tissue Engineering</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- UCSD -->
+      <article class="edu-card">
+        <img src="images/ucsd_logo.png" alt="UCSD Logo" width="100" height="100">
+        <div>
+          <h3>University of California, San Diego</h3>
+          <p class="degree">M.S. in Mechanical Engineering (Biomechanics & Biomedical Engineering)</p>
+          <ul>
+            <li>Incoming: 2026</li>
+            <li>Focus: Medical device design, biomechanics, human-centered engineering</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <!-- Honors & Leadership -->
+    <h2>Honors & Leadership</h2>
+    <div class="honors">
+      <ul>
+        <li>President, BME Student Society</li>
+        <li>Dean's List, UC Davis</li>
+        <li>Research Assistant, Vet Orthopedical Research Lab</li>
+        <li>Other relevant awards and leadership positions</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
   <section id="experience" class="container">
     <h2>Experience</h2>
-    <div class="grid cols-3">
-      <div class="card">
-        <img src="placeholder-project.jpg" alt="Project 1">
-        <div class="meta"><span class="tag">Wearables</span><span class="tag">Prototyping</span></div>
-        <ul>
-          <li>Led device prototyping and testing</li>
-          <li>Performed data analysis to optimize performance</li>
-        </ul>
-      </div>
-      <div class="card">
-        <img src="placeholder-project.jpg" alt="Project 2">
-        <div class="meta"><span class="tag">Embedded</span><span class="tag">R&D</span></div>
-        <ul>
-          <li>Developed embedded electronics for device</li>
-          <li>Conducted validation and verification testing</li>
-        </ul>
-      </div>
-      <div class="card">
-        <img src="placeholder-project.jpg" alt="Project 3">
-        <div class="meta"><span class="tag">Biomechanics</span><span class="tag">Simulation</span></div>
-        <ul>
-          <li>Modeled biomechanical interactions</li>
-          <li>Generated reports for cross-functional teams</li>
-        </ul>
-      </div>
+    <div class="cards-grid">
+      <!-- Example card -->
+      <article class="flip-card">
+        <div class="card-front">
+          <img src="images/experience1.png" alt="Experience 1">
+          <h3>ThinkSurgical, R&D Intern</h3>
+          <p class="meta"><span class="tag">Medical Devices</span><span class="tag">Analysis</span></p>
+        </div>
+        <div class="card-back">
+          <ul>
+            <li>Investigated failures and complaints from the field.</li>
+            <li>Led technical study on accessory device malfunctions.</li>
+          </ul>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- Projects Section -->
   <section id="projects" class="container">
     <h2>Projects</h2>
-    <div class="grid cols-3">
-      <div class="card">
-        <img src="placeholder-project.jpg" alt="Project A">
-        <div class="meta"><span class="tag">Medical Device</span><span class="tag">Innovation</span></div>
-        <ul>
-          <li>Prototype design and fabrication</li>
-          <li>User testing & iteration</li>
-        </ul>
-      </div>
-      <div class="card">
-        <img src="placeholder-project.jpg" alt="Project B">
-        <div class="meta"><span class="tag">Software</span><span class="tag">Embedded</span></div>
-        <ul>
-          <li>Developed custom firmware</li>
-          <li>Integrated sensors and feedback loops</li>
-        </ul>
-      </div>
-      <div class="card">
-        <img src="placeholder-project.jpg" alt="Project C">
-        <div class="meta"><span class="tag">Biomechanics</span><span class="tag">Analysis</span></div>
-        <ul>
-          <li>Simulated forces and stress analysis</li>
-          <li>Generated presentation for collaborators</li>
-        </ul>
-      </div>
+    <div class="cards-grid">
+      <article class="flip-card">
+        <div class="card-front">
+          <img src="images/project1.png" alt="Project 1">
+          <h3>Smart Compression Therapy Sleeve</h3>
+          <p class="meta"><span class="tag">Wearables</span><span class="tag">Embedded</span><span class="tag">Prototyping</span></p>
+        </div>
+        <div class="card-back">
+          <ul>
+            <li>Designed cuff to monitor blood flow and adjust compression.</li>
+            <li>Integrated haptic feedback to improve patient compliance.</li>
+          </ul>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- Contact Section -->
   <section id="contact" class="container">
     <h2>Contact</h2>
-    <div class="grid cols-3">
-      <div class="card">
-        <h3>Email</h3>
-        <p><a href="mailto:charuthiarul@gmail.com">charuthiarul@gmail.com</a></p>
-      </div>
-      <div class="card">
-        <h3>LinkedIn</h3>
-        <p><a href="https://www.linkedin.com/in/charuthi-arul/" target="_blank">linkedin.com/in/charuthi-arul</a></p>
-      </div>
-      <div class="card">
-        <h3>Resume</h3>
-        <p><a href="#">Download</a></p>
-      </div>
-    </div>
+    <p>Feel free to reach out via email or LinkedIn:</p>
+    <p><a href="mailto:charuthiarul@gmail.com">charuthiarul@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/charuthi-arul/">LinkedIn</a></p>
+    <a href="#" class="btn">Resume</a>
   </section>
-</main>
-
-<footer>
-  <p>&copy; 2025 Charuthi Arul. All rights reserved.</p>
-</footer>
-
-<!-- ---------- SCRIPTS ---------- -->
-<script>
-  // Typewriter effect
-  const line1 = "Designing medical devices";
-  const line2 = "that make a difference";
-  let i = 0, j = 0;
-  function typeWriter() {
-    if(i < line1.length){ document.getElementById('line1').textContent += line1.charAt(i++); setTimeout(typeWriter, 50);}
-    else if(j < line2.length){ document.getElementById('line2').textContent += line2.charAt(j++); setTimeout(typeWriter, 50);}
-  }
-  typeWriter();
-
-  // Scroll active menu
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('nav ul li a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      const sectionHeight = section.clientHeight;
-      if(pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight){
-        current = section.getAttribute('id');
-      }
-    });
-    navLinks.forEach(link => {link.classList.remove('active'); if(link.getAttribute('href') === '#' + current){link.classList.add('active');}});
-  });
-
-  // Header shadow on scroll
-  const header = document.querySelector('header');
-  window.addEventListener('scroll', () => {header.classList.toggle('scrolled', window.scrollY > 50);});
-</script>
 
 </body>
 </html>
+
