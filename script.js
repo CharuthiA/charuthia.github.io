@@ -1,6 +1,10 @@
 // ---------- Typing Effect ----------
 const typedText = document.getElementById("typed-text");
-const words = ["A Budding Biomedical Engineer", "A Medical Device and Surgical Robotics Enthusiast", "An Analytical Problem Solver"];
+const words = [
+  "A Budding Biomedical Engineer",
+  "A Medical Device and Surgical Robotics Enthusiast",
+  "An Analytical Problem Solver"
+];
 let i = 0, j = 0, currentWord = "", isDeleting = false;
 
 function type() {
