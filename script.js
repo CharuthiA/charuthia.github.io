@@ -1,4 +1,4 @@
-// TYPING EFFECT
+// Hero typing effect
 const typedText = document.querySelector(".typing-text");
 const text = "Charuthi Arul";
 let index = 0;
@@ -24,16 +24,20 @@ function type() {
   setTimeout(type, delay);
 }
 
+typedText.insertAdjacentHTML("afterend", '<span class="cursor">|</span>');
 document.addEventListener("DOMContentLoaded", type);
 
-// SMOOTH SCROLL
-const navLinks = document.querySelectorAll(".nav-links a");
-navLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const targetId = link.getAttribute("href").substring(1);
-    document.getElementById(targetId)?.scrollIntoView({
-      behavior: "smooth",
-    });
+// Fade-in on scroll
+const faders = document.querySelectorAll(".fade-in");
+const appearOptions = { threshold: 0.2 };
+
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      observer.unobserve(entry.target);
+    }
   });
-});
+}, appearOptions);
+
+faders.forEach(fader => appearOnScroll.observe(fader));
