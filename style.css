@@ -44,17 +44,31 @@ a {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  text-align: center;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
-#hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
 }
 
-#hero .typing-text {
-  color: #1da1f2;
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 15px;
 }
 
 .btn {
@@ -72,14 +86,55 @@ a {
   color: #0d0d0d;
 }
 
-/* SECTIONS */
-section {
+/* ABOUT */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
   padding: 5rem 2rem;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+}
+
+.about-text {
+  flex: 2;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skills-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* EXPERIENCE */
+.timeline {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.timeline li {
+  margin-bottom: 2rem;
+}
+
+.timeline h3 {
+  color: #1da1f2;
 }
 
 /* PROJECTS */
@@ -105,20 +160,6 @@ section {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 1rem;
-}
-
-/* EXPERIENCE TIMELINE */
-.timeline {
-  list-style: none;
-  margin-top: 2rem;
-}
-
-.timeline li {
-  margin-bottom: 2rem;
-}
-
-.timeline h3 {
-  color: #1da1f2;
 }
 
 /* CONTACT */
@@ -151,4 +192,31 @@ footer {
   padding: 2rem;
   background: #0d0d0d;
   border-top: 1px solid #1a1a1a;
+}
+
+/* FADE-IN ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* BLINKING CURSOR */
+.cursor {
+  display: inline-block;
+  background-color: #1da1f2;
+  width: 2px;
+  margin-left: 2px;
+  animation: blink 0.7s steps(1) infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }
