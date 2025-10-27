@@ -1,149 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charuthi Arul | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charuthi Arul | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="logo">CA</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Charuthi Arul</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-content">
-      <div class="hero-text fade-in">
-        <h1>Hi, I'm <span class="typing-text"></span></h1>
-        <p>Mechanical & Biomedical Engineer building medical devices and innovative hardware.</p>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="hero-content">
+        <h1>Hi, I'm <span class="highlight">Charuthi Arul</span></h1>
+        <p>I design and validate medical device hardware that merges mechanical precision with patient-centered usability.</p>
         <a href="#contact" class="btn">Get in Touch</a>
       </div>
-      <div class="hero-image fade-in">
-        <img src="images/hero-photo.jpg" alt="Charuthi Arul">
+      <div class="hero-img">
+        <img src="images/profile.jpg" alt="Profile photo of Charuthi Arul" />
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container about-content">
-      <div class="about-image fade-in">
-        <img src="images/about-photo.jpg" alt="About Charuthi Arul">
-      </div>
-      <div class="about-text fade-in">
-        <h2>About Me</h2>
-        <p>Hello! I build hardware that ships. My sweet spot is where human factors, mechanical design, and fast iteration meet. I work end-to-end: concept → CAD/FEA → prototyping → validation → DFM/DFA handoff—partnering closely with EE/SW, reliability, and operations. I’ve contributed to medical devices, automotive seating, and wearables like a prosthetic pointe shoe. I care about clear communication and thoughtful engineering design.</p>
-      </div>
-    </div>
-  </section>
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m a biomedical engineer passionate about building reliable medical technologies that improve how clinicians operate and how patients heal.
+        My work bridges <strong>mechanical design</strong>, <strong>hardware validation</strong>, and <strong>human-factors-driven iteration</strong>.
+      </p>
+      <p>
+        I thrive where analytical testing meets creative prototyping—transforming data into tangible design improvements.
+      </p>
+    </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-      <h2 class="fade-in">Skills</h2>
-      <div class="skills-grid">
-        <div class="skills-card fade-in">
-          <h3>Mechanical Design</h3>
-          <p>Experience in CAD, FEA, and mechanical prototyping.</p>
-        </div>
-        <div class="skills-card fade-in">
-          <h3>Prototyping & Testing</h3>
-          <p>Hands-on fabrication, testing, and iterative improvement.</p>
-        </div>
-        <div class="skills-card fade-in">
-          <h3>Software & Analysis</h3>
-          <p>Python, MATLAB, and data analysis for biomedical devices.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="container">
-      <h2 class="fade-in">Experience</h2>
-      <ul class="timeline">
-        <li class="fade-in">
-          <h3>R&D Project Management and Engineering Intern</h3>
-          <span>THINK Surgical, Inc. | Jun 2025-Present</span>
-          <p>Investigating device failures, performing V&V testing, and analyzing complaints from the field.</p>
-        </li>
-        <li class="fade-in">
-          <h3>R&D Lab Bioinstrumentation Intern</h3>
-          <span>IllumifyDx | Apr 2023-Jun 2025</span>
-          <p>Worked on sensor integration, prototype testing, and data analysis for clinical applications.</p>
-        </li>
-        <li class="fade-in">
-          <h3>Senior Data Specialist</h3>
-          <span>Research Experience in Surgery (RESURG) | Date</span>
-          <p>Analyzed clinical datasets and supported surgical research projects.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="container">
-      <h2 class="fade-in">Projects</h2>
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
       <div class="project-grid">
-        <div class="project-card fade-in">
-          <img src="images/project1.jpg" alt="Project 1">
-          <h3>Project Title 1</h3>
-          <p>Short description of the project goes here.</p>
-          <a href="#" target="_blank">View Project</a>
+
+        <!-- Project 1 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front" style="background-image:url('images/project1.jpg');"></div>
+            <div class="flip-card-back">
+              <h3>Smart Compression Therapy Sock</h3>
+              <p>Embedded air-cuff system that monitors venous flow between the ankle and thigh to prevent DVT, using haptic feedback for compression control.</p>
+            </div>
+          </div>
         </div>
-        <div class="project-card fade-in">
-          <img src="images/project2.jpg" alt="Project 2">
-          <h3>Project Title 2</h3>
-          <p>Short description of the project goes here.</p>
-          <a href="#" target="_blank">View Project</a>
+
+        <!-- Project 2 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front" style="background-image:url('images/project2.jpg');"></div>
+            <div class="flip-card-back">
+              <h3>Orthopedic Drill Bit Optimization</h3>
+              <p>Developed and validated a stainless-steel TPLO drill bit to minimize thermal osteonecrosis, measuring torque, force, and wear through coating degradation testing.</p>
+            </div>
+          </div>
         </div>
-        <div class="project-card fade-in">
-          <img src="images/project3.jpg" alt="Project 3">
-          <h3>Project Title 3</h3>
-          <p>Short description of the project goes here.</p>
-          <a href="#" target="_blank">View Project</a>
+
+        <!-- Project 3 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front" style="background-image:url('images/project3.jpg');"></div>
+            <div class="flip-card-back">
+              <h3>Bioimpedance-Based Tissue Health Monitor</h3>
+              <p>Designed a haptic-feedback wearable to assess tissue perfusion via impedance readings, enabling early detection of pressure ulcers.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front" style="background-image:url('images/project4.jpg');"></div>
+            <div class="flip-card-back">
+              <h3>Raman Spectroscopy Scanner</h3>
+              <p>Repurposed a Prusa gantry system to precisely maneuver a Raman scope for detecting cancerous spectral peaks in tissue samples.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front" style="background-image:url('images/project5.jpg');"></div>
+            <div class="flip-card-back">
+              <h3>Pressure Ulcer Prevention Wearable</h3>
+              <p>Developed a soft, skin-safe sensor array and haptic alert system to redistribute load during prolonged patient immobility.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front" style="background-image:url('images/project6.jpg');"></div>
+            <div class="flip-card-back">
+              <h3>Smart Wound Healing Monitor</h3>
+              <p>Integrated temperature and impedance sensors into a flexible patch for early infection detection and wound recovery tracking.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <h2 class="fade-in">Contact</h2>
-      <p class="fade-in">Interested in working together or learning more? Drop me a message below!</p>
-      <form class="fade-in">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-      <div class="socials fade-in">
-        <a href="#" target="_blank">LinkedIn</a>
-        <a href="#" target="_blank">GitHub</a>
-        <a href="#" target="_blank">Email</a>
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="exp-list">
+        <div class="exp-item">
+          <h3>R&D / Project Management Intern – Think Surgical</h3>
+          <p>Investigated failure modes in robotic surgical accessories, authored validation protocols, and led complaint data analysis to guide CAPA improvements.</p>
+        </div>
+        <div class="exp-item">
+          <h3>Research Assistant – Vet Orthopedic Research Lab</h3>
+          <p>Executed V&amp;V testing of TPLO drill bits, quantifying torque, force, and wear to characterize long-term performance and heat generation.</p>
+        </div>
+        <div class="exp-item">
+          <h3>Student Researcher – RESURG Initiative</h3>
+          <p>Collaborated on low-cost surgical device innovation for resource-limited hospitals; contributed to mechanical prototyping and usability refinement.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Charuthi Arul. All rights reserved.</p>
-  </footer>
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <h3>University of California, Davis</h3>
+          <p>B.S. Biomedical Engineering – June 2025</p>
+        </div>
+        <div class="edu-card">
+          <h3>University of California, San Diego</h3>
+          <p>M.S. Mechanical Engineering (Biomechanics &amp; Biomedical Engineering) – Incoming</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- SCRIPT -->
-  <script src="script.js"></script>
-</body>
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <p>Let’s connect—whether about collaboration, design, or research opportunities.</p>
+      <div class="contact-links">
+        <a href="mailto:charuthiarul@gmail.com">charuthiarul@gmail.com</a>
+        <a href="https://www.linkedin.com/in/charuthiarul" target="_blank">LinkedIn</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Charuthi Arul | Built with ❤️ and HTML + CSS + JS</p>
+    </footer>
+  </body>
 </html>
