@@ -100,16 +100,24 @@ nav {
 }
 
 .hero-img {
-  flex: 1 1 300px;
+  flex: 1 1 400px; /* allow container to grow */
   text-align: center;
 }
 
 .hero-img img {
-  width: 300px;
+  width: 400px;            /* increase image size */
+  max-width: 100%;         /* prevents overflow on small screens */
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.5);
   transform: translateY(-5px) rotateX(2deg);
   transition: transform 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hero-img img {
+    width: 250px; /* scale down for mobile */
+  }
 }
 
 .hero-img img:hover {
@@ -198,6 +206,7 @@ section h2 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;       /* center the cards */
   padding: 0 2rem 2rem 2rem;
 }
 
@@ -214,14 +223,16 @@ section h2 {
   align-items: flex-start;
   background: var(--mid-blue);
   border-radius: 20px;
-  padding: 1.5rem;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  padding: 1rem 1.5rem;      /* slightly smaller padding */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+  flex: 0 1 500px;           /* smaller default width */
+  max-width: 600px;          /* caps card width */
+  width: 100%;               /* allows responsive scaling */
   position: relative;
-  flex: 1 1 400px;
 }
 
 .edu-logo, .exp-logo {
-  width: 60px;
+  width: 50px;               /* smaller logos */
   height: auto;
   margin-right: 1rem;
 }
@@ -229,6 +240,20 @@ section h2 {
 .edu-text, .exp-text {
   display: flex;
   flex-direction: column;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .edu-card, .exp-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .edu-logo, .exp-logo {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
 }
 
 /* Projects Section */
