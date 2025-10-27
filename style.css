@@ -50,14 +50,99 @@ section h2 { text-align:center; font-size:2.2rem; margin-bottom:2rem; color: var
 @media(max-width:1200px){.skills-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:768px){.skills-grid{grid-template-columns:1fr;}}
 
-/* Education & Experience */
-.edu-horizontal, .exp-vertical { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; padding:0 2rem 2rem 2rem; }
-.edu-card, .exp-card { display:flex; align-items:flex-start; background: var(--mid-blue); border-radius:20px; padding:1rem; box-shadow:0 15px 30px rgba(0,0,0,0.4); flex:0 1 auto; }
-.edu-logo, .exp-logo { width:50px; height:auto; margin-right:0.8rem; }
-.edu-text, .exp-text { display:flex; flex-direction:column; font-size:0.9rem; line-height:1.4; }
-@media(max-width:768px){ .edu-card,.exp-card{flex-direction:column; align-items:center;text-align:center;} .edu-logo,.exp-logo{margin-right:0;margin-bottom:0.5rem;} }
+/* Education Section */
+.edu-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 2rem 2rem 2rem;
+}
 
-/* Projects */
+.edu-card {
+  display: flex;
+  align-items: flex-start;
+  background: var(--mid-blue);
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  flex: 0 1 400px; /* standardized width */
+}
+
+.edu-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 0.8rem;
+}
+
+.edu-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+
+/* Experience Section */
+#experience {
+  padding: 4rem 2rem;
+}
+
+.exp-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Experience Cards */
+.exp-card {
+  display: flex;
+  align-items: flex-start;
+  background: var(--mid-blue);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  flex: 1 1 400px; /* standardized horizontal width */
+  min-height: auto; /* height grows with content */
+}
+
+/* Logos */
+.exp-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+/* Text */
+.exp-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Bullets */
+.exp-text ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .exp-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .exp-logo {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
 /* Projects Section */
 #projects {
   text-align: center;
