@@ -72,9 +72,11 @@ nav {
 .hero-inner {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-left: 4rem;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  margin: 0 auto;          /* remove the left margin */
+  max-width: 1200px;       /* optional: limits content width */
+  gap: 2rem;               /* optional: spacing between content and image */
 }
 
 .hero-content {
