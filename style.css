@@ -193,6 +193,8 @@ section h2 {
   margin-bottom: 0.8rem;
   color: var(--peach);
   font-size: 1.1rem;
+  text-align: center;
+  width: 100%;
 }
 
 .skills-card ul {
@@ -239,15 +241,14 @@ section h2 {
 /* Cards */
 .edu-card, .exp-card {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start; /* keep content top-aligned */
   background: var(--mid-blue);
-  border-radius: 15px;
-  padding: 1rem; /* smaller padding vertically */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* slightly smaller shadow */
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
   position: relative;
-  flex: 1 1 350px; /* can shrink horizontally */
-  max-height: 120px; /* caps vertical height */
-  overflow: hidden;
+  flex: 1 1 400px;
+  min-height: auto; /* let it expand with content */
 }
 
 /* Logos */
@@ -263,8 +264,9 @@ section h2 {
   flex-direction: column;
   font-size: 0.9rem; /* slightly smaller text */
   line-height: 1.3; /* tighter line spacing */
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
-
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
