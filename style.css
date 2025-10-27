@@ -15,10 +15,9 @@
 }
 
 html {
-  scroll-padding-top: 80px; /* Sticky nav offset for smooth scroll */
+  scroll-padding-top: 80px; /* Sticky nav offset */
 }
 
-/* Body */
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--dark-blue);
@@ -65,11 +64,17 @@ nav {
 /* Hero */
 #hero {
   display: flex;
+  justify-content: flex-start; /* align left to allow slight right shift */
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--mid-blue), var(--dark-blue));
+}
+
+.hero-inner {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--mid-blue), var(--dark-blue));
+  margin-left: 4rem; /* Shift entire hero slightly right */
 }
 
 .hero-content {
@@ -77,8 +82,8 @@ nav {
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical center */
-  text-align: center; /* horizontal center */
+  justify-content: center;
+  text-align: center;
   padding-right: 2rem;
 }
 
@@ -113,7 +118,6 @@ nav {
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
-/* Hero Image */
 .hero-img {
   flex: 1 1 300px;
   text-align: center;
@@ -160,61 +164,65 @@ section h2 {
   flex: 1 1 300px;
 }
 
-/* Skills / Education / Experience Grids */
-.skills-grid,
-.edu-grid,
-.exp-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* Skills */
+.skills-grid {
+  display: flex;
+  justify-content: center;
   gap: 2rem;
   padding: 2rem;
 }
 
-.skills-card,
-.edu-card,
-.exp-card {
+.skills-card {
   background: var(--mid-blue);
   border-radius: 20px;
-  padding: 1.5rem;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
   gap: 0.8rem;
   font-size: 1.2rem;
-  position: relative;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.skills-card:hover,
-.edu-card:hover,
-.exp-card:hover {
+.skills-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 .skill-icon {
-  width: 30px;
-  height: 30px;
+  font-size: 1.5rem;
 }
 
-/* Education logos */
-.edu-logo {
-  width: 50px;
+/* Education & Experience Vertical Layout */
+.edu-vertical, .exp-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.edu-card, .exp-card {
+  display: flex;
+  align-items: flex-start;
+  background: var(--mid-blue);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.edu-logo, .exp-logo {
+  width: 60px;
   height: auto;
-  float: right;
-  margin-left: 10px;
+  margin-right: 1rem;
 }
 
-/* Experience logos */
-.exp-logo {
-  width: 40px;
-  height: auto;
-  position: absolute;
-  top: 15px;
-  right: 15px;
+.edu-text, .exp-text {
+  display: flex;
+  flex-direction: column;
 }
 
-/* Projects Section */
+/* Projects */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -266,7 +274,7 @@ section h2 {
   line-height: 1.3;
 }
 
-/* Contact Section */
+/* Contact */
 #contact {
   text-align: center;
   padding: 4rem 2rem;
@@ -301,4 +309,3 @@ footer {
   background: var(--dark-blue);
   font-size: 0.9rem;
   color: var(--cream);
-}
