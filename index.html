@@ -6,6 +6,8 @@
   <title>Charuthi Arul | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+  <!-- Optional: FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -53,9 +55,18 @@
   <section id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="skills-card">Mechanical Design</div>
-      <div class="skills-card">Prototyping & Testing</div>
-      <div class="skills-card">Software & Analysis</div>
+      <div class="skills-card">
+        <i class="fas fa-cogs skill-icon"></i>
+        Mechanical Design
+      </div>
+      <div class="skills-card">
+        <i class="fas fa-vials skill-icon"></i>
+        Prototyping & Testing
+      </div>
+      <div class="skills-card">
+        <i class="fas fa-laptop-code skill-icon"></i>
+        Software & Analysis
+      </div>
     </div>
   </section>
 
@@ -65,6 +76,7 @@
     <div class="edu-grid">
       <div class="edu-card">
         <h3>University of California, Davis</h3>
+        <img src="images/ucd-logo.png" alt="UC Davis Logo" class="edu-logo">
         <p>B.S. Biomedical Engineering | 2021-2025</p>
         <p>Relevant Coursework: Biomechanics, Biomaterials, Control Systems</p>
         <p>Honors/Awards: Make-A-Thon</p>
@@ -72,6 +84,7 @@
       </div>
       <div class="edu-card">
         <h3>University of California, San Diego</h3>
+        <img src="images/ucsd-logo.png" alt="UCSD Logo" class="edu-logo">
         <p>M.S. Mechanical Engineering | Expected 2026-2027</p>
         <p>Concentration: Biomechanics & Biomedical Engineering</p>
       </div>
@@ -83,14 +96,17 @@
     <h2>Experience</h2>
     <div class="exp-grid">
       <div class="exp-card">
+        <img src="images/think-surgical-logo.png" alt="Think Surgical Logo" class="exp-logo">
         <h3>R&D / Project Management Intern – Think Surgical</h3>
         <p>Investigated failure modes in robotic surgical accessories, authored validation protocols, and led complaint data analysis to guide CAPA improvements.</p>
       </div>
       <div class="exp-card">
+        <img src="images/illumifydx-logo.png" alt="IllumifyDx Logo" class="exp-logo">
         <h3>R&D Lab Bioinstrumentation Intern | IllumifyDx</h3>
         <p>Executed V&V testing of TPLO drill bits, quantifying torque, force, and wear to characterize long-term performance and heat generation.</p>
       </div>
       <div class="exp-card">
+        <img src="images/resurg-logo.png" alt="RESURG Logo" class="exp-logo">
         <h3>Senior Data Specialist | RESURG</h3>
         <p>Collaborated on low-cost surgical device innovation for resource-limited hospitals; contributed to mechanical prototyping and usability refinement.</p>
       </div>
@@ -98,41 +114,23 @@
   </section>
 
   <!-- Projects -->
-<!-- Projects -->
-<section id="projects">
-  <h2>Featured Projects</h2>
-  <div class="projects-container">
-    <div class="project-card" style="background-image: url('images/Drillbit.jpg');">
-      <div class="project-info">
-        <h3>VETBIT: Veterinary Bit for Indicating Thermal Osteonecrosis</h3>
-        <p>Embedded air-cuff system that monitors venous flow between ankle and thigh to prevent DVT, using haptic feedback for compression control.</p>
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-container">
+      <div class="project-card" style="background-image: url('images/Drillbit.jpg');">
+        <div class="project-info">
+          <h3>VETBIT: Veterinary Bit for Indicating Thermal Osteonecrosis</h3>
+          <p>Embedded air-cuff system that monitors venous flow between ankle and thigh to prevent DVT, using haptic feedback for compression control.</p>
+        </div>
+      </div>
+      <div class="project-card" style="background-image: url('images/Tessalate.png');">
+        <div class="project-info">
+          <h3>Make-A-Thon 2023</h3>
+          <p>Tessalation Wire Organizer</p>
+        </div>
       </div>
     </div>
-
-    <div class="project-card" style="background-image: url('images/Tessalate.png');">
-      <div class="project-info">
-        <h3>Make-A-Thon 2023</h3>
-        <p>Tessalation Wire Organizer</p>
-      </div>
-    </div>
-
-    <!--<div class="project-card" style="background-image: url('images/Project3.jpg');">-->
-      <div class="project-info">
-        <h3>Project 3 Title</h3>
-        <p>Short description of Project 3. Describe the innovation, mechanics, or patient benefit briefly.</p>
-      </div>
-    </div>
-
-    <!--<div class="project-card" style="background-image: url('images/Project4.jpg');">-->
-      <div class="project-info">
-        <h3>Project 4 Title</h3>
-        <p>Short description of Project 4. Describe the innovation, mechanics, or patient benefit briefly.</p>
-      </div>
-    </div>
-
-    <!-- Add more project cards as needed -->
-  </div>
-</section>
+  </section>
 
   <!-- Contact -->
   <section id="contact">
