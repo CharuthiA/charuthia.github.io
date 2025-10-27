@@ -270,10 +270,11 @@ section h2 {
   padding-top: 2rem;
 }
 
+/* Flip Card */
 .flip-card {
   perspective: 1000px;
   width: 300px;
-  height: 400px;
+  height: 450px; /* taller to fit back content */
 }
 
 .card {
@@ -291,57 +292,73 @@ section h2 {
   transform: rotateY(180deg);
 }
 
+/* Front & Back */
 .front, .back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 1rem;
-  border-radius: 20px;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .front {
   background-size: cover;
   background-position: center;
   color: var(--cream);
+  justify-content: flex-end;
 }
 
 .front h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .front .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
+  justify-content: center;
 }
 
 .front .tags span {
   background: var(--peach);
   color: var(--dark-blue);
-  font-size: 0.7rem;
-  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 5px;
 }
 
 .back {
   background: var(--mid-blue);
-  transform: rotateY(180deg);
   color: var(--cream);
+  transform: rotateY(180deg);
+  justify-content: flex-start;
+  overflow-y: auto;
 }
 
 .back h3 {
-  margin-bottom: 0.5rem;
   color: var(--peach);
+  margin-bottom: 0.8rem;
 }
 
 .back p {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flip-card {
+    width: 90%;
+    height: 400px;
+  }
+}
+
 
 /* Contact */
 #contact {
