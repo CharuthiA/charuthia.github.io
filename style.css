@@ -205,42 +205,47 @@ section h2 {
 .edu-vertical, .exp-vertical {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  align-items: center;       /* center the cards */
+  gap: 1rem; /* smaller gap between cards */
   padding: 0 2rem 2rem 2rem;
 }
 
-.edu-horizontal {
+.edu-horizontal, .exp-horizontal {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem; /* smaller gap horizontally */
   padding: 0 2rem 2rem 2rem;
 }
 
+/* Cards */
 .edu-card, .exp-card {
   display: flex;
   align-items: flex-start;
   background: var(--mid-blue);
-  border-radius: 20px;
-  padding: 1rem 1.5rem;      /* slightly smaller padding */
-  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
-  flex: 0 1 500px;           /* smaller default width */
-  max-width: 600px;          /* caps card width */
-  width: 100%;               /* allows responsive scaling */
+  border-radius: 15px;
+  padding: 1rem; /* smaller padding vertically */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* slightly smaller shadow */
   position: relative;
+  flex: 1 1 350px; /* can shrink horizontally */
+  max-height: 120px; /* caps vertical height */
+  overflow: hidden;
 }
 
+/* Logos */
 .edu-logo, .exp-logo {
-  width: 50px;               /* smaller logos */
+  width: 50px; /* slightly smaller */
   height: auto;
-  margin-right: 1rem;
+  margin-right: 0.8rem;
 }
 
+/* Text */
 .edu-text, .exp-text {
   display: flex;
   flex-direction: column;
+  font-size: 0.9rem; /* slightly smaller text */
+  line-height: 1.3; /* tighter line spacing */
 }
+
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
@@ -270,38 +275,39 @@ section h2 {
   padding-top: 2rem;
 }
 
-/* Flip Card */
-.flip-card {
-  perspective: 1000px;
+/* Flip Card Container */
+.container {
   width: 300px;
-  height: 450px; /* taller to fit back content */
+  height: 400px;
+  perspective: 1000px;
 }
 
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+/* Card */
 .card {
-  width: 100%;
   height: 100%;
+  width: 100%;
   position: relative;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
-  transition: transform 0.6s;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
-.flip-card:hover .card {
-  transform: rotateY(180deg);
-}
-
 /* Front & Back */
 .front, .back {
-  position: absolute;
-  width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  width: 100%;
   border-radius: 20px;
+  position: absolute;
+  backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 1.5rem;
   text-align: center;
 }
@@ -353,12 +359,11 @@ section h2 {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .flip-card {
+  .container {
     width: 90%;
     height: 400px;
   }
 }
-
 
 /* Contact */
 #contact {
