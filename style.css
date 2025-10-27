@@ -1,10 +1,72 @@
-/* ===== Hero Section Centering ===== */
+/* Color Palette */
+:root {
+  --dark-blue: #0d1321;
+  --mid-blue: #1d2d44;
+  --light-blue: #5385b1;
+  --cream: #ffefd3;
+  --peach: #ffba89;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 80px; /* Sticky nav offset */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--dark-blue);
+  color: var(--cream);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: var(--mid-blue);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--peach);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--cream);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--peach);
+  text-shadow: 0 0 8px rgba(255,186,137,0.6);
+}
+
+/* Hero */
 #hero {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  padding: 2rem;
+  justify-content: flex-start;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--mid-blue), var(--dark-blue));
 }
 
 .hero-inner {
@@ -12,68 +74,250 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  margin-left: 4rem;
 }
 
 .hero-content {
+  flex: 1 1 400px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  padding-right: 2rem;
 }
 
-/* ===== Education Horizontal Cards ===== */
-.edu-horizontal {
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: var(--light-blue);
+}
+
+.hero-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: var(--light-blue);
+  color: var(--dark-blue);
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+  background: var(--peach);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.hero-img {
+  flex: 1 1 300px;
+  text-align: center;
+  perspective: 1000px;
+}
+
+.hero-img img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  transform: translateY(-5px) rotateX(2deg);
+  transition: transform 0.3s;
+}
+
+.hero-img img:hover {
+  transform: translateY(-10px) rotateX(4deg);
+}
+
+/* Section headings */
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--peach);
+}
+
+/* About Section */
+.about-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;
-}
-
-.edu-card {
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ===== Projects Flip Cards ===== */
-.flip-card {
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-  margin: auto;
-}
-
-.flip-card .card {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
-}
-
-.flip-card:hover .card {
-  transform: rotateY(180deg);
-}
-
-.flip-card .front, .flip-card .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  backface-visibility: hidden;
-  color: var(--cream);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 4rem 2rem;
   align-items: center;
-  padding: 1rem;
-  text-align: center;
 }
 
-.flip-card .front {
+.about-img img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  transform: translateY(-5px) rotateX(2deg);
+}
+
+.about-text {
+  flex: 1 1 300px;
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.skills-card {
+  background: var(--mid-blue);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1 1 300px;
+}
+
+.skills-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+}
+
+/* Education & Experience Vertical Layout */
+.edu-vertical, .exp-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.edu-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.edu-card, .exp-card {
+  display: flex;
+  align-items: flex-start;
+  background: var(--mid-blue);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  position: relative;
+  flex: 1 1 400px;
+}
+
+.edu-logo, .exp-logo {
+  width: 60px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.edu-text, .exp-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Projects */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.project-card {
+  position: relative;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.flip-card .back {
-  background: var(--mid-blue);
-  transform: rotateY(180deg);
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(13,19,33,0.9), rgba(13,19,33,0));
+  color: var(--cream);
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+}
+
+.project-card:hover .project-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--peach);
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+/* Contact */
+#contact {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#contact h2 {
+  color: var(--peach);
+  margin-bottom: 1rem;
+}
+
+.contact-links a {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  background: var(--light-blue);
+  color: var(--dark-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+  background: var(--peach);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--dark-blue);
+  font-size: 0.9rem;
+  color: var(--cream);
 }
