@@ -6,7 +6,6 @@
   <title>Charuthi Arul | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-  <!-- Optional: FontAwesome for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -27,13 +26,15 @@
 
   <!-- Hero -->
   <section id="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm <span class="highlight typing-text"></span></h1>
-      <p>I design and validate medical device hardware that merges mechanical precision with patient-centered usability.</p>
-      <a href="#contact" class="btn">Get in Touch</a>
-    </div>
-    <div class="hero-img">
-      <img src="images/Sit Flower.jpeg" alt="Profile photo">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <h1>Hi, I'm <span class="highlight typing-text"></span></h1>
+        <p>I design and validate medical device hardware that merges mechanical precision with patient-centered usability.</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+      <div class="hero-img">
+        <img src="images/Sit Flower.jpeg" alt="Profile photo">
+      </div>
     </div>
   </section>
 
@@ -56,16 +57,13 @@
     <h2>Skills</h2>
     <div class="skills-grid">
       <div class="skills-card">
-        <i class="fas fa-cogs skill-icon"></i>
-        Mechanical Design
+        <span class="skill-icon">⚙️</span> Mechanical Design
       </div>
       <div class="skills-card">
-        <i class="fas fa-vials skill-icon"></i>
-        Prototyping & Testing
+        <span class="skill-icon">🧪</span> Prototyping & Testing
       </div>
       <div class="skills-card">
-        <i class="fas fa-laptop-code skill-icon"></i>
-        Software & Analysis
+        <span class="skill-icon">💻</span> Software & Analysis
       </div>
     </div>
   </section>
@@ -73,20 +71,25 @@
   <!-- Education -->
   <section id="education">
     <h2>Education</h2>
-    <div class="edu-grid">
+    <div class="edu-vertical">
       <div class="edu-card">
-        <h3>University of California, Davis</h3>
-        <img src="images/UCDavisSeal.png" alt="UC Davis Logo" class="edu-logo">
-        <p>B.S. Biomedical Engineering | 2021-2025</p>
-        <p>Relevant Coursework: Biomechanics, Biomaterials, Control Systems</p>
-        <p>Honors/Awards: Make-A-Thon</p>
-        <p>Clubs: BHours Engineering Group, BMES</p>
+        <img src="images/ucsd_logo.png" alt="UCSD Logo" class="edu-logo">
+        <div class="edu-text">
+          <h3>University of California, San Diego</h3>
+          <p>M.S. Mechanical Engineering | Sept 2026 - June 2027</p>
+          <p>Concentration: Biomechanics & Biomedical Engineering</p>
+        </div>
       </div>
       <div class="edu-card">
-        <h3>University of California, San Diego</h3>
-        <img src="images/ucsd_logo.png" alt="UCSD Logo" class="edu-logo">
-        <p>M.S. Mechanical Engineering | Expected 2026-2027</p>
-        <p>Concentration: Biomechanics & Biomedical Engineering</p>
+        <img src="images/UCDavisSeal.png" alt="UC Davis Logo" class="edu-logo">
+        <div class="edu-text">
+          <h3>University of California, Davis</h3>
+          <p>B.S. Biomedical Engineering | Sept 2021 - June 2025</p>
+          <p>GPA: --</p>
+          <p>Relevant Coursework: Biomechanics, Biomaterials, Control Systems</p>
+          <p>Honors/Awards: Make-A-Thon</p>
+          <p>Clubs/Leadership: BHours Engineering Group, BMES</p>
+        </div>
       </div>
     </div>
   </section>
@@ -94,21 +97,30 @@
   <!-- Experience -->
   <section id="experience">
     <h2>Experience</h2>
-    <div class="exp-grid">
+    <div class="exp-vertical">
       <div class="exp-card">
         <img src="images/thinksurgical_logo.jpeg" alt="Think Surgical Logo" class="exp-logo">
-        <h3>R&D / Project Management Intern – Think Surgical</h3>
-        <p>Investigated failure modes in robotic surgical accessories, authored validation protocols, and led complaint data analysis to guide CAPA improvements.</p>
+        <div class="exp-text">
+          <h3>R&D / Project Management Intern | Think Surgical</h3>
+          <p>2024</p>
+          <p>Investigated failure modes in robotic surgical accessories, authored validation protocols, and led complaint data analysis to guide CAPA improvements.</p>
+        </div>
       </div>
       <div class="exp-card">
         <img src="images/illumifydx.png" alt="IllumifyDx Logo" class="exp-logo">
-        <h3>R&D Lab Bioinstrumentation Intern | IllumifyDx</h3>
-        <p>Executed V&V testing of TPLO drill bits, quantifying torque, force, and wear to characterize long-term performance and heat generation.</p>
+        <div class="exp-text">
+          <h3>R&D Lab Bioinstrumentation Intern | IllumifyDx</h3>
+          <p>2023</p>
+          <p>Executed V&V testing of TPLO drill bits, quantifying torque, force, and wear to characterize long-term performance and heat generation.</p>
+        </div>
       </div>
       <div class="exp-card">
         <img src="images/resurg-2019-logo.png" alt="RESURG Logo" class="exp-logo">
-        <h3>Senior Data Specialist | RESURG</h3>
-        <p>Collaborated on low-cost surgical device innovation for resource-limited hospitals; contributed to mechanical prototyping and usability refinement.</p>
+        <div class="exp-text">
+          <h3>Senior Data Specialist | RESURG</h3>
+          <p>2022</p>
+          <p>Collaborated on low-cost surgical device innovation for resource-limited hospitals; contributed to mechanical prototyping and usability refinement.</p>
+        </div>
       </div>
     </div>
   </section>
