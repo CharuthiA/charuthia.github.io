@@ -1,4 +1,6 @@
-/* Color Palette */
+/* ==========================
+   COLOR PALETTE
+========================== */
 :root {
   --dark-blue: #0d1321;
   --mid-blue: #1d2d44;
@@ -7,14 +9,19 @@
   --peach: #ffba89;
 }
 
-/* Reset */
+/* ==========================
+   GLOBAL RESET
+========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--dark-blue);
@@ -22,7 +29,9 @@ body {
   line-height: 1.6;
 }
 
-/* Navigation */
+/* ==========================
+   NAVIGATION
+========================== */
 nav {
   display: flex;
   justify-content: space-between;
@@ -48,89 +57,176 @@ nav {
 .nav-links a {
   color: var(--cream);
   text-decoration: none;
-  transition: color 0.3s;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: var(--peach);
 }
 
-/* Hero */
-.hero {
-  height: 80vh;
+/* ==========================
+   HERO
+========================== */
+#hero {
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem 5%;
+  gap: 3rem;
   background: linear-gradient(180deg, var(--mid-blue), var(--dark-blue));
-  text-align: center;
-  padding: 0 2rem;
 }
 
-.hero-content h2 {
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero-content h1 {
   font-size: 2.5rem;
-  color: var(--cream);
+  margin-bottom: 1rem;
 }
 
-.hero-content .highlight {
+.highlight {
   color: var(--light-blue);
 }
 
 .hero-content p {
   font-size: 1.1rem;
-  margin: 1rem 0 2rem;
-  max-width: 600px;
+  margin-bottom: 2rem;
 }
 
-.cta-btn {
+.btn {
   background: var(--light-blue);
   color: var(--dark-blue);
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   text-decoration: none;
-  transition: 0.3s;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.cta-btn:hover {
+.btn:hover {
   background: var(--peach);
-  color: var(--dark-blue);
+  transform: scale(1.05);
 }
 
-/* About */
-.about {
-  padding: 5rem 2rem;
-  background: var(--mid-blue);
-  display: flex;
-  justify-content: center;
-}
-
-.about-content {
-  display: flex;
-  align-items: center;
-  max-width: 1000px;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-
-.profile-img {
-  width: 250px;
+.hero-img img {
+  width: 300px;
   border-radius: 50%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.about-text {
-  flex: 1;
-}
-
-.about-text h2 {
-  margin-bottom: 1rem;
-  color: var(--peach);
-}
-
-/* Projects */
-.projects {
-  padding: 5rem 2rem;
+/* ==========================
+   SECTION BASE STYLES
+========================== */
+section {
+  padding: 5rem 10%;
   text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--peach);
+  margin-bottom: 1.5rem;
+}
+
+section p {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+}
+
+/* ==========================
+   ABOUT
+========================== */
+#about {
+  background: var(--mid-blue);
+}
+
+/* ==========================
+   SKILLS
+========================== */
+#skills {
   background: var(--dark-blue);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skills-card {
+  background: var(--mid-blue);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ==========================
+   EDUCATION
+========================== */
+#education {
+  background: var(--mid-blue);
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.edu-card {
+  background: var(--dark-blue);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ==========================
+   EXPERIENCE
+========================== */
+#experience {
+  background: var(--dark-blue);
+}
+
+.exp-list {
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.exp-item {
+  background: var(--mid-blue);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.exp-item:hover {
+  transform: translateY(-5px);
+}
+
+/* ==========================
+   PROJECTS (FLIP CARDS)
+========================== */
+#projects {
+  background: var(--mid-blue);
 }
 
 .project-grid {
@@ -138,63 +234,91 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
-}
-
-/* Flip Card */
-.card-container {
   perspective: 1000px;
 }
 
-.card {
-  position: relative;
+.flip-card {
+  background: transparent;
   width: 100%;
-  height: 400px;
-  transform-style: preserve-3d;
-  transition: transform 1s;
+  height: 350px;
+  perspective: 1000px;
 }
 
-.card-container:hover .card {
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.front, .back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-size: cover;
   background-position: center;
+  border-radius: 10px;
+}
+
+.flip-card-front {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-.back {
+.flip-card-back {
   background-color: var(--mid-blue);
-  color: var(--cream);
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Contact */
-.contact {
-  padding: 5rem 2rem;
-  text-align: center;
-  background: var(--mid-blue);
+/* ==========================
+   CONTACT
+========================== */
+#contact {
+  background: var(--dark-blue);
 }
 
-.contact h2 {
+.contact-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  color: var(--light-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.contact-links a:hover {
   color: var(--peach);
 }
 
-/* Footer */
+/* ==========================
+   FOOTER
+========================== */
 footer {
   text-align: center;
   padding: 1.5rem;
-  background: var(--dark-blue);
+  background: var(--mid-blue);
   font-size: 0.9rem;
   color: var(--cream);
 }
