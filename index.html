@@ -1,172 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charuthi Arul | Engineering Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charuthi Arul | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-left">
-            <h1><span class="white-text">Hi, I'm</span> <span class="typed-text">Charuthi Arul</span></h1>
-            <p>Building hardware that makes an impact.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn">Get in Touch</a>
-                <a href="resume.pdf" class="btn" target="_blank">Resume</a>
-            </div>
-        </div>
-        <div class="hero-right">
-            <img src="images/charuthi.jpg" alt="Charuthi Arul">
-        </div>
-    </section>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Charuthi Arul</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- About Me -->
-    <section id="about">
-        <div class="about-left">
-            <img src="images/charuthi.jpg" alt="Charuthi Arul">
-        </div>
-        <div class="about-right">
-            <p>Hello! I build hardware that ships. My sweet spot is where human factors, mechanical design, and fast iteration meet. I work end-to-end: concept → CAD/FEA → prototyping → validation → DFM/DFA handoff—partnering closely with EE/SW, reliability, and operations.</p>
-            <p>I’ve contributed to medical devices, automotive seating at Tesla, and wearables like a prosthetic pointe shoe. I care about clear problem framing, data-driven decisions, and simple mechanisms that perform reliably at scale. I thrive in product teams at Apple, Meta, Google, or Tesla—where craftsmanship, rigor, and user empathy matter.</p>
-            <p><strong>Strengths:</strong> CAD & FEA (3DX/CATIA, SolidWorks, Fusion 360, ANSYS), GD&T & tolerance stacks, design reviews, and test bring-up.</p>
-            <p><strong>Build:</strong> Rapid prototyping (3D printing, CNC, laser cutting), acoustic fixture design, material characterization, lab instrumentation, EMG/IMU prototypes.</p>
-            <p><strong>Software:</strong> MATLAB/Python for analysis (NumPy, Pandas), Monte Carlo simulations, signal processing (EMG), Arduino/C/C++, HTML/JS for tooling, Unity, Unreal Engine 5 for XR/VR simulation and visualization.</p>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-        <div class="skill-box">
-            <h3>🛠 Mechanical Design</h3>
-            <p>CAD, FEA, GD&T, tolerance stacks, design reviews</p>
-        </div>
-        <div class="skill-box">
-            <h3>🔧 Prototyping & Testing</h3>
-            <p>3D Printing, CNC, laser cutting, lab instrumentation, EMG/IMU prototypes</p>
-        </div>
-        <div class="skill-box">
-            <h3>💻 Software & Analysis</h3>
-            <p>MATLAB, Python, Arduino/C/C++, signal processing, XR/VR simulations</p>
-        </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education">
-        <div class="edu-box">
-            <img src="images/ucdavis-logo.png" alt="UC Davis Logo">
-            <div class="edu-info">
-                <h3>UC Davis | BS Biomedical Engineering</h3>
-                <p>2021-2025, GPA 3.76</p>
-                <p>Relevant Coursework: XYZ</p>
-                <p>Clubs: XYZ</p>
-                <p>Awards: XYZ</p>
-            </div>
-        </div>
-        <div class="edu-box">
-            <img src="images/ucsd-logo.png" alt="UCSD Logo">
-            <div class="edu-info">
-                <h3>UCSD | MS Mechanical Engineering</h3>
-                <p>Incoming, Expected 2026-2027</p>
-                <p>Concentration: Biomechanics & Biomedical Engineering</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience">
-        <div class="exp-box">
-            <img src="images/think-surgical-logo.png" alt="Think Surgical Logo">
-            <h4>Think Surgical</h4>
-            <p>2024</p>
-        </div>
-        <div class="exp-box">
-            <img src="images/carney-lab-logo.png" alt="Carney Lab Logo">
-            <h4>Carney Lab</h4>
-            <p>2023</p>
-        </div>
-        <div class="exp-box">
-            <img src="images/resurg-logo.png" alt="Resurg Logo">
-            <h4>RESURG</h4>
-            <p>2022</p>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-       <div class="project-box">
-    <div class="project-box-inner">
-        <div class="project-front">
-            <img src="images/project1.jpg" alt="Project 1">
-            <h4>Smart Compression Therapy Sleeve</h4>
-            <p>Medical Device, Wearable</p>
-        </div>
-        <div class="project-back">
-            <p>Developed a cuff inside a compression sock to monitor and adjust blood flow to prevent DVT using pressure sensors and air pumps.</p>
-        </div>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="typing-text">Charuthi Arul</span></h1>
+      <p>Mechanical & Biomedical Engineer building medical devices and innovative hardware.</p>
+      <a href="#contact" class="btn">Get in Touch</a>
     </div>
-</div>
-        <!-- Add 5 more project boxes here -->
-        <div class="project-box">
-    <div class="project-box-inner">
-        <div class="project-front">
-            <img src="images/project1.jpg" alt="Project 1">
-            <h4>Smart Compression Therapy Sleeve</h4>
-            <p>Medical Device, Wearable</p>
-        </div>
-        <div class="project-back">
-            <p>Developed a cuff inside a compression sock to monitor and adjust blood flow to prevent DVT using pressure sensors and air pumps.</p>
-        </div>
-    </div>
-</div>
-        <div class="project-box">
-    <div class="project-box-inner">
-        <div class="project-front">
-            <img src="images/project1.jpg" alt="Project 1">
-            <h4>Smart Compression Therapy Sleeve</h4>
-            <p>Medical Device, Wearable</p>
-        </div>
-        <div class="project-back">
-            <p>Developed a cuff inside a compression sock to monitor and adjust blood flow to prevent DVT using pressure sensors and air pumps.</p>
-        </div>
-    </div>
-</div>
-        <div class="project-box">
-    <div class="project-box-inner">
-        <div class="project-front">
-            <img src="images/project1.jpg" alt="Project 1">
-            <h4>Smart Compression Therapy Sleeve</h4>
-            <p>Medical Device, Wearable</p>
-        </div>
-        <div class="project-back">
-            <p>Developed a cuff inside a compression sock to monitor and adjust blood flow to prevent DVT using pressure sensors and air pumps.</p>
-        </div>
-    </div>
-</div>
-        <div class="project-box">
-    <div class="project-box-inner">
-        <div class="project-front">
-            <img src="images/project1.jpg" alt="Project 1">
-            <h4>Smart Compression Therapy Sleeve</h4>
-            <p>Medical Device, Wearable</p>
-        </div>
-        <div class="project-back">
-            <p>Developed a cuff inside a compression sock to monitor and adjust blood flow to prevent DVT using pressure sensors and air pumps.</p>
-        </div>
-    </div>
-</div>
-        
-    </section>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:charuthi@example.com">charuthi@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/charuthi" target="_blank">linkedin.com/in/charuthi</a></p>
-        <p>GitHub: <a href="https://github.com/charuthi" target="_blank">github.com/charuthi</a></p>
-    </section>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hello! I build hardware that ships. My sweet spot is where human factors, mechanical design, and fast iteration meet. I work end-to-end: concept → CAD/FEA → prototyping → validation → DFM/DFA handoff—partnering closely with EE/SW, reliability, and operations. I’ve contributed to medical devices, automotive seating, and wearables like a prosthetic pointe shoe. I care about clear communication and thoughtful engineering design.</p>
+    </div>
+  </section>
 
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <!-- Example Project Card -->
+        <div class="project-card">
+          <img src="images/project1.jpg" alt="Project 1">
+          <h3>Project Title 1</h3>
+          <p>Short description of the project goes here.</p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <img src="images/project2.jpg" alt="Project 2">
+          <h3>Project Title 2</h3>
+          <p>Short description of the project goes here.</p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+
+        <!-- Add more project cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <h2>Experience</h2>
+      <ul class="timeline">
+        <li>
+          <h3>Role/Title 1</h3>
+          <span>Company Name | Date</span>
+          <p>Brief description of your role and contributions.</p>
+        </li>
+        <li>
+          <h3>Role/Title 2</h3>
+          <span>Company Name | Date</span>
+          <p>Brief description of your role and contributions.</p>
+        </li>
+        <!-- Add more timeline items -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Interested in working together or learning more? Drop me a message below!</p>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div class="socials">
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Charuthi Arul. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
 </body>
 </html>
