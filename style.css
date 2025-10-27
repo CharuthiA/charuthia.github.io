@@ -93,8 +93,9 @@ nav {
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 3.5rem;       /* make it bigger */
+  line-height: 1.2;      /* tighter spacing */
+  margin-bottom: 1.5rem; /* a little more breathing room */
 }
 
 .hero-img {
