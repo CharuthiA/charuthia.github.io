@@ -90,9 +90,10 @@ section h2 { text-align:center; font-size:2.2rem; margin-bottom:2rem; color: var
 
 .exp-horizontal {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Experience Cards */
@@ -103,8 +104,7 @@ section h2 { text-align:center; font-size:2.2rem; margin-bottom:2rem; color: var
   border-radius: 20px;
   padding: 1.5rem;
   box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-  flex: 1 1 400px; /* standardized horizontal width */
-  min-height: auto; /* height grows with content */
+  width: 100%;
 }
 
 /* Logos */
@@ -112,6 +112,7 @@ section h2 { text-align:center; font-size:2.2rem; margin-bottom:2rem; color: var
   width: 50px;
   height: auto;
   margin-right: 1rem;
+  flex-shrink: 0;
 }
 
 /* Text */
@@ -120,6 +121,15 @@ section h2 { text-align:center; font-size:2.2rem; margin-bottom:2rem; color: var
   flex-direction: column;
   font-size: 0.9rem;
   line-height: 1.4;
+  flex: 1;
+}
+
+.exp-text h3 {
+  margin-bottom: 0.5rem;
+}
+
+.exp-text p {
+  margin-bottom: 0.5rem;
 }
 
 /* Bullets */
@@ -129,6 +139,11 @@ section h2 { text-align:center; font-size:2.2rem; margin-bottom:2rem; color: var
   padding-left: 1.2rem;
 }
 
+.exp-text strong {
+  margin-top: 0.5rem;
+  display: block;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .exp-card {
@@ -136,10 +151,12 @@ section h2 { text-align:center; font-size:2.2rem; margin-bottom:2rem; color: var
     align-items: center;
     text-align: center;
   }
-
   .exp-logo {
     margin-right: 0;
     margin-bottom: 0.5rem;
+  }
+  .exp-text ul {
+    text-align: left;
   }
 }
 
