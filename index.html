@@ -3,154 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Charuthi Arul | Medical Device R&D Engineer</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .section {
-      padding: 80px 0;
-    }
-
-    /* NAV */
-    .site-header {
-      border-bottom: 1px solid #eee;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #111;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 100px 0;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .typing {
-      font-size: 1.5rem;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    .cursor {
-      display: inline-block;
-      margin-left: 5px;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      0%, 50%, 100% { opacity: 1; }
-      25%, 75% { opacity: 0; }
-    }
-
-    .lead {
-      max-width: 600px;
-      margin-bottom: 20px;
-    }
-
-    /* BUTTONS */
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background: black;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .btn.secondary {
-      background: #eee;
-      color: #111;
-      margin-top: 20px;
-    }
-
-    .text-link {
-      display: inline-block;
-      margin-top: 10px;
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* FEATURE CARD */
-    .feature-card {
-      display: flex;
-      gap: 20px;
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid #eee;
-      padding: 20px;
-      border-radius: 10px;
-      transition: 0.2s;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    }
-
-    .feature-card img {
-      width: 200px;
-      border-radius: 10px;
-    }
-
-    .meta {
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    /* SPLIT */
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-
-    .card {
-      border: 1px solid #eee;
-      padding: 20px;
-      border-radius: 10px;
-    }
-  </style>
+  <meta
+    name="description"
+    content="Charuthi Arul is a biomedical engineer focused on medical device R&D, product development, verification and validation, and rapid prototyping."
+  />
+  <title>Charuthi Arul | Biomedical Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 
 <body>
-
-  <!-- NAV -->
   <header class="site-header">
-    <nav class="nav container">
-      <a href="index.html"><strong>CA</strong></a>
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Charuthi Arul homepage">
+        <span class="brand-mark">CA</span>
+        <span class="brand-text">Charuthi Arul</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
       <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="experience.html">Experience</a></li>
@@ -160,114 +31,124 @@
   </header>
 
   <main>
-
-    <!-- HERO -->
-    <section class="hero container">
-      <h1>Hi, I'm Charuthi Arul</h1>
-
-      <h2 class="typing">
-        <span id="typing-text"></span><span class="cursor">|</span>
-      </h2>
-
-      <p class="lead">
-        I design and validate medical devices—from concept to testable systems—using rigorous V&V, failure analysis, and data-driven iteration.
-      </p>
-
-      <a class="btn" href="projects.html">View My Work</a>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section container">
-      <h2>About Me</h2>
-      <p>
-        I’m a biomedical engineer focused on medical device product development, with experience in mechanical design, automation, and verification testing. 
-        I’ve built systems using robotics, vision inspection, and quantitative validation to improve reliability and performance.
-      </p>
-      <a class="text-link" href="about.html">Learn more →</a>
-    </section>
-
-    <!-- FEATURED PROJECT -->
-    <section class="section container">
-      <h2>Latest Project</h2>
-
-      <a class="feature-card" href="projects/vetbit.html">
-        <img src="images/Drillbit.jpg" alt="Drill bit" />
-        <div>
-          <p class="meta">Orthopedic Instrumentation | V&V</p>
-          <h3>TPLO Surgical Drill Bit Development</h3>
-          <p>
-            Designed and validated a surgical drill bit through torque, force, and wear testing to define performance limits.
-          </p>
-          <span class="text-link">View case study →</span>
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="hero-grid container">
+        <div class="hero-copy reveal-on-scroll">
+          <p class="eyebrow">Biomedical Engineer → Medical Device R&amp;D</p>
+          <h1 id="hero-title">Building Medical Devices Through Product Development, Verification &amp; Validation, and Rapid Prototyping</h1>
+          <p class="hero-subhead">I design and validate medical devices with a systems mindset—transforming concepts into testable hardware through rigorous engineering, failure analysis, and data-driven iteration.</p>
+          <div class="button-row" aria-label="Portfolio actions">
+            <a class="btn btn-primary" href="projects.html">View Projects</a>
+            <a class="btn btn-secondary" href="Charuthi_Arul_Resume.pdf" download>Download Resume</a>
+          </div>
         </div>
-      </a>
 
-      <a class="btn secondary" href="projects.html">See All Projects</a>
+        <aside class="hero-panel reveal-on-scroll" aria-label="Engineering focus areas">
+          <div class="hero-panel-topline"></div>
+          <p class="panel-kicker">Engineering Focus</p>
+          <div class="metric-grid">
+            <div>
+              <span class="metric-value">V&amp;V</span>
+              <span class="metric-label">Test Method Development</span>
+            </div>
+            <div>
+              <span class="metric-value">R&amp;D</span>
+              <span class="metric-label">Device Iteration</span>
+            </div>
+            <div>
+              <span class="metric-value">DFx</span>
+              <span class="metric-label">Manufacturable Systems</span>
+            </div>
+            <div>
+              <span class="metric-value">QA</span>
+              <span class="metric-label">Failure Analysis</span>
+            </div>
+          </div>
+          <div class="signal-card">
+            <span class="signal-dot"></span>
+            <p>Product development grounded in clinical needs, mechanical performance, and measurable verification evidence.</p>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <!-- EDUCATION + EXPERIENCE -->
-    <section class="section container split">
-      
-      <div class="card">
-        <h3>Education</h3>
-        <p>
-          B.S. Biomedical Engineering, UC Davis<br>
-          Incoming M.S. Mechanical Engineering (Biomechanics), UCSD
-        </p>
-        <a class="text-link" href="about.html#education">View details →</a>
+    <section class="about-preview section" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="engineering-visual reveal-on-scroll" aria-hidden="true">
+          <div class="visual-orbit"></div>
+          <div class="visual-card visual-card-primary">Systems Thinking</div>
+          <div class="visual-card visual-card-secondary">Human-Centered Design</div>
+        </div>
+        <div class="content-card glass-card reveal-on-scroll">
+          <p class="section-label">About</p>
+          <h2 id="about-title">Biomedical engineering with a product development lens.</h2>
+          <p>I bring a biomedical engineering background to medical device development, verification and validation, and rapid prototyping. My work connects systems thinking with human-centered engineering to translate early concepts into safe, reliable, and testable device architectures.</p>
+          <a class="text-link" href="about.html">More About Me <span aria-hidden="true">→</span></a>
+        </div>
       </div>
-
-      <div class="card">
-        <h3>Experience</h3>
-        <p>
-          R&D, automation, and V&V engineering experience across medical devices, robotics, and inspection systems.
-        </p>
-        <a class="text-link" href="experience.html">View experience →</a>
-      </div>
-
     </section>
 
+    <section class="featured-project section" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-heading reveal-on-scroll">
+          <p class="section-label">Featured Project</p>
+          <h2 id="featured-title">Flagship medical device verification work.</h2>
+        </div>
+
+        <article class="project-showcase reveal-on-scroll">
+          <a class="project-image-link" href="projects/vetbit.html" aria-label="View TPLO Surgical Drill Bit Development case study">
+            <img src="images/Drillbit.jpg" alt="Stainless steel surgical drill bit prototype" />
+          </a>
+          <div class="project-content">
+            <span class="tag">Orthopedic Instrumentation | Verification &amp; Validation</span>
+            <h3>TPLO Surgical Drill Bit Development</h3>
+            <p>Designed and validated a stainless steel orthopedic drill bit through torque, force, wear, and coating degradation testing to establish surgical performance boundaries and support medical device verification.</p>
+            <a class="btn btn-primary" href="projects/vetbit.html">View Full Case Study</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="credentials section" aria-labelledby="credentials-title">
+      <div class="container">
+        <div class="section-heading reveal-on-scroll">
+          <p class="section-label">Credentials</p>
+          <h2 id="credentials-title">Education and experience aligned with medtech R&amp;D.</h2>
+        </div>
+        <div class="split credential-grid">
+          <article class="card credential-card reveal-on-scroll">
+            <div class="card-icon" aria-hidden="true">⌁</div>
+            <h3>Education</h3>
+            <ul class="clean-list">
+              <li>B.S. Biomedical Engineering — UC Davis</li>
+              <li>Incoming MSE Mechanical Engineering — Johns Hopkins University</li>
+            </ul>
+            <a class="text-link" href="education.html">View Education <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card credential-card reveal-on-scroll">
+            <div class="card-icon" aria-hidden="true">▣</div>
+            <h3>Experience</h3>
+            <ul class="clean-list">
+              <li>Edwards Lifesciences</li>
+              <li>Medical device manufacturing support</li>
+              <li>Verification &amp; Validation exposure</li>
+              <li>Process engineering experience</li>
+            </ul>
+            <a class="text-link" href="experience.html">View Experience <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section" aria-labelledby="cta-title">
+      <div class="container cta-card reveal-on-scroll">
+        <p class="section-label">Let’s Connect</p>
+        <h2 id="cta-title">Interested in rigorous, human-centered medical device development?</h2>
+        <p>I’m excited to connect with recruiters, engineering teams, and collaborators working at the intersection of product development, verification, and patient-centered technology.</p>
+        <a class="btn btn-primary" href="contact.html">Contact Me</a>
+      </div>
+    </section>
   </main>
-
-  <!-- TYPING SCRIPT -->
-  <script>
-    const roles = [
-      "Biomedical Engineer",
-      "Mechanical Engineer",
-      "Product Developer"
-    ];
-
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    const typingText = document.getElementById("typing-text");
-
-    function typeEffect() {
-      const current = roles[roleIndex];
-
-      if (isDeleting) {
-        typingText.textContent = current.substring(0, charIndex--);
-      } else {
-        typingText.textContent = current.substring(0, charIndex++);
-      }
-
-      let speed = isDeleting ? 50 : 100;
-
-      if (!isDeleting && charIndex === current.length) {
-        speed = 1500;
-        isDeleting = true;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
-        speed = 300;
-      }
-
-      setTimeout(typeEffect, speed);
-    }
-
-    document.addEventListener("DOMContentLoaded", typeEffect);
-  </script>
-
 </body>
 </html>
