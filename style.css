@@ -31,6 +31,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   scroll-snap-type: y proximity;
 }
 
@@ -270,15 +271,14 @@ p {
 .hero-title {
   max-width: 820px;
   margin-bottom: 10px;
-  white-space: nowrap;
-  font-size: clamp(3.05rem, 5.4vw, 5.85rem);
+  font-size: clamp(3.4rem, 7vw, 6.6rem);
 }
 
 .typing-line {
   display: flex;
   align-items: center;
   min-height: clamp(2.15rem, 4vw, 3.5rem);
-  margin-bottom: clamp(24px, 3.2vw, 34px);
+  margin-bottom: 18px;
   color: var(--blue-700);
   font-size: clamp(1.55rem, 3.3vw, 3rem);
   font-weight: 800;
@@ -302,7 +302,6 @@ p {
 
 .hero-statement {
   max-width: 700px;
-  margin-top: 0;
   margin-bottom: 16px;
   color: var(--navy-900);
   font-size: clamp(1.18rem, 2vw, 1.72rem);
@@ -333,7 +332,6 @@ p {
 .hero-panel {
   position: relative;
   overflow: hidden;
-  margin-top: clamp(16px, 4vh, 44px);
   padding: clamp(22px, 3vw, 28px);
   border: 1px solid rgba(255, 255, 255, 0.62);
   border-radius: var(--radius-lg);
@@ -922,13 +920,11 @@ main.container.section > h1 {
   }
 
   .hero-title {
-    white-space: normal;
     font-size: clamp(2.8rem, 14vw, 4.2rem);
   }
 
   .typing-line {
     min-height: 2.25rem;
-    margin-bottom: 24px;
     font-size: clamp(1.35rem, 7vw, 2.1rem);
   }
 
