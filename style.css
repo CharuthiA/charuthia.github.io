@@ -785,6 +785,314 @@ main.container.section > h1 {
   font-weight: 750;
 }
 
+
+/* ========================
+   ABOUT PAGE
+======================== */
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 24%, rgba(42, 101, 164, 0.13), transparent 26rem),
+    radial-gradient(circle at 88% 20%, rgba(6, 17, 31, 0.08), transparent 30rem),
+    linear-gradient(180deg, #ffffff 0%, #f5f8fc 100%);
+}
+
+.about-hero::before {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(16, 36, 60, 0.042) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 36, 60, 0.042) 1px, transparent 1px);
+  background-size: 42px 42px;
+  content: "";
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.78), transparent 86%);
+  pointer-events: none;
+}
+
+.about-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+
+.about-portrait-panel {
+  position: relative;
+  min-height: min(66vh, 610px);
+  padding: clamp(18px, 2.4vw, 26px);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(237, 243, 250, 0.62)),
+    radial-gradient(circle at 30% 18%, rgba(42, 101, 164, 0.16), transparent 18rem);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(20px);
+}
+
+.portrait-glow {
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  right: -70px;
+  top: -66px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42, 101, 164, 0.27), transparent 68%);
+  animation: orbit-glow 7s ease-in-out infinite alternate;
+}
+
+.portrait-frame {
+  position: relative;
+  overflow: hidden;
+  height: min(48vh, 455px);
+  border: 1px solid rgba(16, 36, 60, 0.12);
+  border-radius: 24px;
+  background: var(--navy-950);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24), 0 24px 60px rgba(6, 17, 31, 0.16);
+}
+
+.portrait-frame::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 52%, rgba(6, 17, 31, 0.34));
+  content: "";
+}
+
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.92) contrast(1.04);
+}
+
+.portrait-signal-card {
+  position: absolute;
+  right: clamp(24px, 3vw, 42px);
+  bottom: clamp(26px, 3.4vw, 48px);
+  display: flex;
+  max-width: 300px;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 44px rgba(6, 17, 31, 0.13);
+  backdrop-filter: blur(18px);
+}
+
+.portrait-signal-card p {
+  margin-bottom: 0;
+  color: var(--navy-900);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.floating-discipline {
+  position: absolute;
+  padding: 9px 12px;
+  border: 1px solid rgba(31, 78, 140, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--blue-700);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 14px 34px rgba(6, 17, 31, 0.10);
+  backdrop-filter: blur(14px);
+}
+
+.discipline-one {
+  top: 28px;
+  left: 30px;
+}
+
+.discipline-two {
+  right: 26px;
+  top: 36%;
+}
+
+.about-copy h1 {
+  max-width: 760px;
+  margin-bottom: 16px;
+  font-size: clamp(2.45rem, 4.7vw, 5rem);
+}
+
+.about-lede {
+  max-width: 760px;
+  margin-bottom: 18px;
+  color: var(--navy-900);
+  font-size: clamp(1.08rem, 1.55vw, 1.34rem);
+  line-height: 1.42;
+  letter-spacing: -0.02em;
+}
+
+.about-narrative {
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+}
+
+.about-narrative p {
+  margin-bottom: 0;
+  font-size: 0.98rem;
+}
+
+.about-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: clamp(22px, 3vw, 34px);
+}
+
+.about-stat-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 112px;
+  padding: 16px;
+  border: 1px solid rgba(16, 36, 60, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92), 0 16px 34px rgba(6, 17, 31, 0.06);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.about-stat-card::after {
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  right: -30px;
+  bottom: -32px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42, 101, 164, 0.15), transparent 70%);
+  content: "";
+}
+
+.about-stat-card:hover,
+.leadership-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(31, 78, 140, 0.24);
+  box-shadow: var(--shadow-card);
+}
+
+.stat-number,
+.stat-label {
+  display: block;
+}
+
+.stat-number {
+  color: var(--navy-950);
+  font-size: 1.18rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.stat-label {
+  margin-top: 9px;
+  color: var(--slate-600);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.28;
+}
+
+.leadership-section {
+  background: linear-gradient(180deg, var(--off-white), #ffffff);
+}
+
+.leadership-shell {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+  padding: clamp(24px, 4vw, 44px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 8% 10%, rgba(42, 101, 164, 0.13), transparent 20rem),
+    rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(18px);
+}
+
+.leadership-heading {
+  position: sticky;
+  top: 100px;
+}
+
+.leadership-heading h2 {
+  font-size: clamp(1.9rem, 3vw, 3.05rem);
+}
+
+.leadership-heading p:not(.section-label) {
+  max-width: 420px;
+  margin-bottom: 0;
+}
+
+.leadership-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.leadership-card {
+  position: relative;
+  padding: 24px;
+  border: 1px solid rgba(16, 36, 60, 0.12);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.90), rgba(242, 246, 251, 0.78));
+  box-shadow: 0 16px 40px rgba(6, 17, 31, 0.07);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.leadership-index {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--blue-700);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.leadership-card h3 {
+  margin-bottom: 10px;
+  font-size: clamp(1.25rem, 1.7vw, 1.6rem);
+}
+
+.leadership-card p {
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.leadership-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.leadership-tags span {
+  display: inline-flex;
+  padding: 7px 10px;
+  border: 1px solid rgba(31, 78, 140, 0.16);
+  border-radius: 999px;
+  background: rgba(242, 246, 251, 0.86);
+  color: var(--blue-700);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+@keyframes orbit-glow {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.72;
+  }
+
+  to {
+    transform: translate3d(-24px, 22px, 0) scale(1.08);
+    opacity: 1;
+  }
+}
+
 /* ========================
    ANIMATION + RESPONSIVE
 ======================== */
@@ -839,6 +1147,8 @@ main.container.section > h1 {
 @media (max-width: 980px) {
   .hero-grid,
   .about-grid,
+  .about-hero-grid,
+  .leadership-shell,
   .project-showcase {
     grid-template-columns: 1fr;
   }
@@ -858,6 +1168,23 @@ main.container.section > h1 {
 
   .hero-panel {
     max-width: 620px;
+  }
+
+  .about-portrait-panel {
+    min-height: auto;
+    max-width: 620px;
+  }
+
+  .about-stat-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-stat-card-wide {
+    grid-column: span 2;
+  }
+
+  .leadership-heading {
+    position: static;
   }
 
   .project-image-link {
@@ -934,10 +1261,39 @@ main.container.section > h1 {
   }
 
   .metric-grid,
+  .about-stat-grid,
   .split,
   .credential-grid,
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-stat-card-wide {
+    grid-column: auto;
+  }
+
+  .about-portrait-panel {
+    padding: 16px;
+  }
+
+  .portrait-frame {
+    height: 390px;
+  }
+
+  .portrait-signal-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    max-width: none;
+    margin-top: 14px;
+  }
+
+  .floating-discipline {
+    display: none;
+  }
+
+  .leadership-shell {
+    padding: 22px;
   }
 
   .engineering-visual {
