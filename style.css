@@ -269,6 +269,10 @@ p {
   font-size: clamp(3.4rem, 7vw, 6.6rem);
 }
 
+.hero-name {
+  white-space: nowrap;
+}
+
 .typing-line {
   display: flex;
   align-items: center;
